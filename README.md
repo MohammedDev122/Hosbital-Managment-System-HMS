@@ -1,7 +1,7 @@
 # Hosbital-Managment-System-HMS
 Hospital Managment System It stimulate the patient's journey from booking a diagnosis to geting prescription or operation
 ##HMS Notes
-1. Login and Access Control
+##1. Login and Access Control
 
 When you open the application, you are met with a Login Screen. Users must enter their Login Name and Password to access the system.
 
@@ -14,7 +14,7 @@ When you open the application, you are met with a Login Screen. Users must enter
         Staff Members: The rest of the department personnel with standard operational permissions.
 
 The system automatically identifies the user’s department and authority level upon sign-in.
-2. Nursing Department (Head Nurse / Nurse)
+##2. Nursing Department (Head Nurse / Nurse)
 
 If you log in as a Head Nurse, the system displays several options:
 
@@ -46,7 +46,7 @@ If you log in as a Head Nurse, the system displays several options:
 
     My Logs & My Info: View login history and edit personal profile information.
 
-3. Accounting Department (Head Accountant / Accountant)
+##3. Accounting Department (Head Accountant / Accountant)
 
 If logged in as the Head Accountant, the system provides:
 
@@ -60,7 +60,7 @@ If logged in as the Head Accountant, the system provides:
 
     Manage Accountants (Head of Department only): Ability to add, edit, or fire accountants.
 
-4. Medical Department (Head Doctor / Doctor)
+##4. Medical Department (Head Doctor / Doctor)
 
 The Doctor's dashboard includes:
 
@@ -86,7 +86,7 @@ The Doctor's dashboard includes:
 
         Manage doctor lists, specializations, and the Service Main list (to set service costs).
 
-5. Pharmacy Department (Head Pharmacist / Pharmacist)
+##5. Pharmacy Department (Head Pharmacist / Pharmacist)
 
     Pharmacy Record: Pharmacists create records based on a Prescription ID. The system automatically pulls patient info and records the Pharmacist's ID.
 
