@@ -14,7 +14,7 @@ Authority Levels: Each department has two levels of authority:
     Staff Members:   The rest of the department personnel with standard operational permissions.
 
 The system automatically identifies the user’s department and authority level upon sign-in.
- 2. Nursing Department (Head Nurse / Nurse)
+ ## 2. Nursing Department (Head Nurse / Nurse)
 
 If you log in as a Head Nurse, the system displays several options:
 
