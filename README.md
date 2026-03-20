@@ -5,13 +5,17 @@ Hospital Managment System It stimulate the patient's journey from booking a diag
 
 When you open the application, you are met with a Login Screen. Users must enter their Login Name and Password to access the system.
 
-    Role-Based Access: Once logged in, the features and functions available depend on the user's Department and Permission Level.
+    ### Role-Based Access:
+    Once logged in, the features and functions available depend on the user's Department and Permission Level.
 
-    Authority Levels: Each department has two levels of authority:
+   ### Authority Levels:
+   Each department has two levels of authority:
 
-        Head of Department: A single individual with full administrative control over their section.
+      ###  Head of Department:
+      A single individual with full administrative control over their section.
 
-        Staff Members: The rest of the department personnel with standard operational permissions.
+     ###   Staff Members:
+     The rest of the department personnel with standard operational permissions.
 
 The system automatically identifies the user’s department and authority level upon sign-in.
 ## 2. Nursing Department (Head Nurse / Nurse)
