@@ -1,0 +1,11 @@
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\bin\Debug\HosbitalBussinessLayer.dll
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\bin\Debug\HosbitalBussinessLayer.pdb
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\bin\Debug\DocumentationAttr.dll
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\bin\Debug\HosbitalDataAccessLayer.dll
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\bin\Debug\HosbitalDataAccessLayer.pdb
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\bin\Debug\DocumentationAttr.pdb
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\obj\Debug\HosbitalBussinessLayer.csproj.AssemblyReference.cache
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\obj\Debug\HosbitalBussinessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\obj\Debug\Hosbital.19BAAB9D.Up2Date
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\obj\Debug\HosbitalBussinessLayer.dll
+C:\Users\Win -11\source\repos\HosbitalBussinessLayer\obj\Debug\HosbitalBussinessLayer.pdb

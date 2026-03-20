@@ -1,0 +1,6 @@
+C:\Users\Win -11\source\repos\HosbitalDataAccessLayer\bin\Debug\HosbitalDataAccessLayer.dll
+C:\Users\Win -11\source\repos\HosbitalDataAccessLayer\bin\Debug\HosbitalDataAccessLayer.pdb
+C:\Users\Win -11\source\repos\HosbitalDataAccessLayer\obj\Debug\HosbitalDataAccessLayer.csproj.AssemblyReference.cache
+C:\Users\Win -11\source\repos\HosbitalDataAccessLayer\obj\Debug\HosbitalDataAccessLayer.csproj.CoreCompileInputs.cache
+C:\Users\Win -11\source\repos\HosbitalDataAccessLayer\obj\Debug\HosbitalDataAccessLayer.dll
+C:\Users\Win -11\source\repos\HosbitalDataAccessLayer\obj\Debug\HosbitalDataAccessLayer.pdb

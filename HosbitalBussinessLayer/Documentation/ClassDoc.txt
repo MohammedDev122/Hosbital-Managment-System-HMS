@@ -1,0 +1,216 @@
+
+*******************************************************
+                                  Class1                    
+
+
+*******************************************************
+                                  clsFailCauses                    
+
+Description: {this Class Is Responsiple for providing the reason behind process fail in the system}
+
+*******************************************************
+                                  clsRoleBack                    
+
+Description: {this Class is responsiple for stepping back of any process in the system when the chain of process fail}
+
+*******************************************************
+                                  clsViews                    
+
+Description: {this Class Responsiple for managing how the user Retrive the Data}
+
+*******************************************************
+                                  clsPatientLogs                    
+
+Description: {Manages and store all Patient's Service History}
+
+*******************************************************
+                                  clsAccountant:clsEmployees                    
+
+Description: {this class is used to Manage Accountant's info and it inherits it's props & methods from clsEmployee Class}
+
+*******************************************************
+                                  clsBankAccount                    
+
+Description: {manages all bank Accounts of Users within the system}
+
+*******************************************************
+                                  clsDeparmtments                    
+
+Description: {It is Used To Manage All Departments in the System}
+
+*******************************************************
+                                  clsDoctors:clsEmployees                    
+
+Description: {this class is used to Manage Doctor's info and it inherits it's props & methods from clsEmployee Class}
+
+*******************************************************
+                                  clsEmployees:clsPerson                    
+
+Description: {this class is used to Manage Employee's info and it inherits it's props & methods from clsPerson Class}
+
+*******************************************************
+                                  clsNurses:clsEmployees                    
+
+Description: {this class is used to Manage Nurse's info and it inherits it's props & methods from clsEmployee Class}
+
+*******************************************************
+                                  clsPatients:clsPerson                    
+
+Description: {this class is used to Manage Patient's info and it inherits it's props & methods from clsPerson Class}
+
+*******************************************************
+                                  clsPaymentMethods                    
+
+Description: {this Class Is Used to Manage All the payment Methods}
+
+*******************************************************
+                                  clsPayments                    
+
+Description: {this Class Is Used To Manage All Payment records in the system}
+
+*******************************************************
+                                  clsPerson                    
+
+Description: {this class is used to Manage person's info and it is the Base Class for all the Users in the system}
+
+*******************************************************
+                                  clsPharmacists:clsEmployees                    
+
+Description: {this class is used to Manage Pharmacist's info and it inherits it's props & methods from clsEmployee Class}
+
+*******************************************************
+                                  clsSpecilization                    
+
+Description: {it is Used To Manage All Medical Specilization In the Hospital}
+
+*******************************************************
+                                  CodeDocumentationNavigator                    
+
+
+*******************************************************
+                                  ClassDocumentationNavigator                    
+
+
+*******************************************************
+                                  DocumentationAttribute:Attribute                    
+
+
+*******************************************************
+                                  clsSystem                    
+
+
+*******************************************************
+                                  clsDiagnosis:clsServices                    
+
+Description: {this class is used to Manage Diagnosis's info,set Medical Record If Needed, booking an appointment and it inherits it's props & methods from clsServices Class}
+
+*******************************************************
+                                  clsOperations:clsServices                    
+
+Description: {this class is used to Manage Operation's info,Change patient State  If Operation Failed, booking a room and it inherits it's props & methods from clsServices Class}
+
+*******************************************************
+                                  clsPharmacyRecord                    
+
+Description: {this class is used to manage all patient_pharmacey processes}
+
+*******************************************************
+                                  clsServices                    
+
+Description: {this class is used to Manage Service's info and it is the Base Class for all the Services in the system}
+
+*******************************************************
+                                  clsBasket                    
+
+Description: {Used To Be Container of the items-prescriped Medications- which the Patient Select them from his Prescription}
+
+*******************************************************
+                                  clsItems                    
+
+Description: {this Class Is Used To collect the prescriped Medicatios as items in the Basket when buying them through the Pharmecy Record}
+
+*******************************************************
+                                  clsMedications                    
+
+Description: {Used To Manage the Medication}
+
+*******************************************************
+                                  clsPrescripedMed                    
+
+Description: {used for linking the medication with the prescription as prescriped Med}
+
+*******************************************************
+                                  clsPrescription                    
+
+Description: {Used to Manage Prescriptions for Patient}
+
+*******************************************************
+                                  clsDoctorReservation                    
+
+Description: {this class Is Used To Manage all Doctors Schedual Making Sure There Is No Overlaps Services}
+
+*******************************************************
+                                  clsMedicalRecords                    
+
+Description: {it Is Used To Manage Patient's Medical Record and is Used To Get A Prescription or have Operation}
+
+*******************************************************
+                                  clsNurseReservation                    
+
+Description: {this class Is Used To Manage all Nurses Schedual Making Sure There Is No Overlaps Services}
+
+*******************************************************
+                                  clsOperationRoomReservation                    
+
+Description: {this Class Is Used To organize room's Scheduals to make sure that the room is available and don't have overlap operations}
+
+*******************************************************
+                                  clsOperationStaff                    
+
+Description: {Responsiple for Managing the staff member Assigning them to operations Making Sure they dont Have overlapped Service With It}
+
+*******************************************************
+                                  clsLogins                    
+
+Description: {this Class Is Used To Manage All Users Logins Account And Permissions And Roles-According to department- in the System Whether it's an Admin,Manager,Employee}
+
+*******************************************************
+                                  clsLogs                    
+
+Description: {used to Record who and when entered the system}
+
+*******************************************************
+                                  clsCountries                    
+
+Description: {this Class Is Used To Manage All The Countries That users in the system are from}
+
+*******************************************************
+                                  clsMedicalCatorgies                    
+
+Description: {used to manage and organize each medicine signed in the system under spacific catogry}
+
+*******************************************************
+                                  clsOperationRoom                    
+
+Description: {this Class IS Used to Manage Rooms in the Hospital}
+
+*******************************************************
+                                  clsServiceTypes                    
+
+Description: {this Class Is Used To Manage the Services in the Hospital and set up it's Price}
+
+*******************************************************
+                                  <>c                    
+
+
+*******************************************************
+                                  <>c__DisplayClass7_0                    
+
+
+*******************************************************
+                                  <>c__DisplayClass8_0                    
+
+
+*******************************************************
+                                  <>c                    
+

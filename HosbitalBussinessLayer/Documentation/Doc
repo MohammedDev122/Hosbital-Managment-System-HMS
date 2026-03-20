@@ -1,0 +1,1351 @@
+
+*******************************************************
+                                  Class1                    
+
+
+
+Constructors of the Class1 class:
+	Public  Class1()
+
+
+Methods of the Class1 class:
+
+
+Props & Fileds of the Class1 class:
+
+*******************************************************
+                                  clsFailCauses                    
+
+
+
+Constructors of the clsFailCauses class:
+
+
+Methods of the clsFailCauses class:
+
+
+Props & Fileds of the clsFailCauses class:
+
+*******************************************************
+                                  clsRoleBack                    
+
+
+
+Constructors of the clsRoleBack class:
+
+
+Methods of the clsRoleBack class:
+	Static Public Boolean DeleteAccount(Int32 AccountID)
+	Static Public Boolean DeletePrescripedMed(Int32 PrescripedMedID)
+	Static Public Boolean DeleteMedicalRecord(Int32 RecordID)
+	Static Public Boolean DeletePatientLog(Int32 LogID)
+	Static Public Boolean DeletePerson(Int32 PersonID)
+	Static Public Boolean DeleteEmployee(Int32 employeeID)
+	Static Public Boolean DeletePayment(Int32 PaymentID)
+	Static Public Boolean DeleteService(Int32 ServiceID)
+	Static Public Boolean DeleteDoctorReservation(Int32 ReservationID)
+	Static Public Boolean DeleteNurseReservation(Int32 ReservationID)
+	Static Public Boolean DeleteDoctorReservation(Int32 DoctorID, Int32 ServiceID)
+	Static Public Boolean DeleteNurseReservation(Int32 NurseID, Int32 ServiceID)
+	Static Public Boolean DeleteAllDoctorsReservationForOperation(Int32 ServiceID)
+	Static Public Boolean DeleteAllNurseReservationForOperation(Int32 ServiceID)
+	Static Public Boolean DeleteRoomReservation(Int32 RoomReservationID)
+	Static Public Boolean DeletePharmecyRec(Int32 RecID)
+
+
+Props & Fileds of the clsRoleBack class:
+
+*******************************************************
+                                  clsViews                    
+
+
+
+Constructors of the clsViews class:
+
+
+Methods of the clsViews class:
+
+
+Props & Fileds of the clsViews class:
+
+*******************************************************
+                                  clsPatientLogs                    
+
+
+
+Constructors of the clsPatientLogs class:
+	Public  clsPatientLogs()
+	Private  clsPatientLogs(Int32 LogID, Int32 ServiceID, Int32 PatientID)
+
+
+Methods of the clsPatientLogs class:
+	Static Public clsPatientLogs FindPatientLogByID(Int32 LogID)
+	Static Public clsPatientLogs FindPatientLogByServiceID(Int32 ServiceID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewLog()
+	Public Boolean Save()
+	Static Public DataTable GetAllLogs()
+	Static Public Boolean Exist(Int32 LogID)
+
+
+Props & Fileds of the clsPatientLogs class:
+	Public  Int32 get_LogID
+	Private  Void set_LogID
+	Public  Int32 get_ServiceID
+	Public  Void set_ServiceID
+	Public  Int32 get_PatientID
+	Public  Void set_PatientID
+	Public  clsPatients get_PatientInfo
+	Private  Void set_PatientInfo
+	Public  clsServices get_ServiceInfo
+	Private  Void set_ServiceInfo
+	Public  enLogsAndRecFailCause get_Cause
+	Private  Void set_Cause
+
+*******************************************************
+                                  clsAccountant                    
+
+
+
+Constructors of the clsAccountant class:
+	Public  clsAccountant():Base()
+	Private  clsAccountant(Int32 AccountantID, Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)	 :clsEmployees(Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 DepartmentID, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)
+
+
+Methods of the clsAccountant class:
+	Static Public clsAccountant FindByID(Int32 AccountantID)
+	Private Boolean _AddNew(Int32 PersonID)
+	Private Boolean _Update()
+	Public Boolean SaveAccountant(Int32 PersonID)
+	Static Public Boolean Exist(Int32 AccountantID)
+	Static Public DataTable GetAll(enShowing showing)
+
+
+Props & Fileds of the clsAccountant class:
+	Public  Int32 get_AccountantID
+	Private  Void set_AccountantID
+	Public  enState EmployeeState
+	Public  clsBankAccount Account
+	Public  enShowing Showing
+	Protected  enMode Mode
+
+*******************************************************
+                                  clsBankAccount                    
+
+
+
+Constructors of the clsBankAccount class:
+	Public  clsBankAccount()
+	Private  clsBankAccount(Int32 AccountID, String AccountNum, Double AmmountOfMoney, String Password)
+
+
+Methods of the clsBankAccount class:
+	Static Public clsBankAccount FindAccountByID(Int32 AccountID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewAccount()
+	Public Boolean Save()
+	Private Boolean _UpdateAccount()
+	Static Public DataTable GetAllAccounts()
+	Static Public Boolean Exist(Int32 AccountID)
+
+
+Props & Fileds of the clsBankAccount class:
+	Public  Int32 get_AccountID
+	Private  Void set_AccountID
+	Public  String get_AccountNum
+	Public  Void set_AccountNum
+	Private  String get__AccountNum
+	Private  Void set__AccountNum
+	Public  String get_Password
+	Public  Void set_Password
+	Public  Double get_AmmountOfMoney
+	Public  Void set_AmmountOfMoney
+	Public  enBankAccountsFailCause get_FailCause
+	Private  Void set_FailCause
+	Private  enMode Mode
+
+*******************************************************
+                                  clsDeparmtments                    
+
+
+
+Constructors of the clsDeparmtments class:
+	Private  clsDeparmtments(Int32 DepartmentID, String DepartmentName, Int32 NumOfEmployees, Int32 DepartmentManagerID)
+	Public  clsDeparmtments()
+
+
+Methods of the clsDeparmtments class:
+	Static Public clsDeparmtments FindDepartmentByID(Int32 DepartmentID)
+	Static Public clsDeparmtments FindDepartmentByName(String DepartmentName)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public DataTable GetAllDepartments()
+	Static Public Boolean Exist(Int32 DepartmentID)
+	Static Private Boolean Exist(String DepartmentName)
+
+
+Props & Fileds of the clsDeparmtments class:
+	Public  Int32 get_DepartmentID
+	Private  Void set_DepartmentID
+	Public  String get_DepartmentName
+	Public  Void set_DepartmentName
+	Public  Int32 get_NumOfEmployees
+	Public  Void set_NumOfEmployees
+	Public  Int32 get_DepartmentManagerID
+	Public  Void set_DepartmentManagerID
+	Public  enDepartmentsFailCause get_Cause
+	Private  Void set_Cause
+	Private  enMode Mode
+
+*******************************************************
+                                  clsDoctors                    
+
+
+
+Constructors of the clsDoctors class:
+	Public  clsDoctors():Base()
+	Private  clsDoctors(Int32 DoctorID, Int32 SpecilizationID, Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)	 :clsEmployees(Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 DepartmentID, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)
+
+
+Methods of the clsDoctors class:
+	Static Public clsDoctors FindByID(Int32 DoctorID)
+	Private Boolean _IsDataCorrect()
+	Private Boolean _AddNew(Int32 PersonID)
+	Private Boolean _Update()
+	Public Boolean SaveDoctor(Int32 PersonID)
+	Static Public Boolean Exist(Int32 DoctorID)
+	Static Public DataTable GetAll(enShowing showing)
+
+
+Props & Fileds of the clsDoctors class:
+	Public  Int32 get_DoctorID
+	Private  Void set_DoctorID
+	Public  Int32 get_SpecilizationID
+	Public  Void set_SpecilizationID
+	Public  enState EmployeeState
+	Public  clsBankAccount Account
+	Public  enShowing Showing
+	Protected  enMode Mode
+
+*******************************************************
+                                  clsEmployees                    
+
+
+
+Constructors of the clsEmployees class:
+	Protected  clsEmployees(Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 DepartmentID, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)	 :clsPerson(Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, Int32 CountryID)
+	Public  clsEmployees():Base()
+
+
+Methods of the clsEmployees class:
+	Static Public clsEmployees FindByID(Int32 EmployeeID)
+	Static Protected clsEmployees FindEmployeeByPersonID(Int32 PersonID)
+	Private Boolean _IsDataIsCorrect()
+	Private Boolean _AddNew(Int32 PersonID)
+	Private Boolean _Update()
+	Public Boolean SaveEmployee(Int32 PersonID)
+	Static Public Boolean FireUnFireEmployee(Int32 EmployeeID, enState State)
+	Static Public Boolean Exist(Int32 employeeID)
+	Static Public DataTable GetAll(enShowing showing)
+	Public Boolean IncreaseWorkingDays(Byte WorkingDays)
+	Static Public Int32 GetEmployeeRoleID(Int32 EmployeeID)
+
+
+Props & Fileds of the clsEmployees class:
+	Public  Int32 get_EmplyeeID
+	Protected  Void set_EmplyeeID
+	Public  Double get_Salery
+	Public  Void set_Salery
+	Public  Byte get_WorkingDays
+	Public  Void set_WorkingDays
+	Public  Int32 get_DepartmentID
+	Public  Void set_DepartmentID
+	Public  DateTime get_EmploymentDate
+	Public  Void set_EmploymentDate
+	Public  Nullable`1 get_DueDate
+	Protected  Void set_DueDate
+	Private  Int32 _DepartmentID
+	Private  DateTime _EmploymentDate
+	Public  enState EmployeeState
+	Private  enState _PreviousEmployeeState
+	Public  clsBankAccount Account
+	Public  enShowing Showing
+	Protected  enMode Mode
+
+*******************************************************
+                                  clsNurses                    
+
+
+
+Constructors of the clsNurses class:
+	Public  clsNurses():Base()
+	Private  clsNurses(Int32 NurseID, Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)	 :clsEmployees(Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 DepartmentID, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)
+
+
+Methods of the clsNurses class:
+	Static Public clsNurses FindByID(Int32 NurseID)
+	Private Boolean _AddNew(Int32 PersonID)
+	Private Boolean _Update()
+	Public Boolean SaveNurse(Int32 PersonID)
+	Static Public Boolean Exist(Int32 NurseID)
+	Static Public DataTable GetAll(enShowing showing)
+
+
+Props & Fileds of the clsNurses class:
+	Public  Int32 get_NurseID
+	Private  Void set_NurseID
+	Public  enState EmployeeState
+	Public  clsBankAccount Account
+	Public  enShowing Showing
+	Protected  enMode Mode
+
+*******************************************************
+                                  clsPatients                    
+
+
+
+Constructors of the clsPatients class:
+	Protected  clsPatients(Int32 PatientID, enState PatientState, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, Int32 CountryID, String patientAccessKey)	 :clsPerson(Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, Int32 CountryID)
+	Public  clsPatients():Base()
+
+
+Methods of the clsPatients class:
+	Static Public clsPatients FindByID(Int32 PatientID)
+	Private Boolean _AddNew(Int32 PersonID)
+	Private Boolean _Update()
+	Public Boolean SavePatient(Int32 PersonID)
+	Static Public Boolean Exist(Int32 PatientID)
+	Public Boolean _CancelleAllPatientServices()
+	Static Public DataTable GetAll(enShowing showing)
+
+
+Props & Fileds of the clsPatients class:
+	Public  Int32 get_PatientID
+	Private  Void set_PatientID
+	Public  String get_PatientAccessKey
+	Public  Void set_PatientAccessKey
+	Public  enState PatientState
+	Public  clsBankAccount Account
+	Public  enShowing Showing
+	Protected  enMode Mode
+
+*******************************************************
+                                  clsPaymentMethods                    
+
+
+
+Constructors of the clsPaymentMethods class:
+	Public  clsPaymentMethods()
+	Private  clsPaymentMethods(Int32 PaymentMethodID, String PaymentMethod)
+
+
+Methods of the clsPaymentMethods class:
+	Static Public clsPaymentMethods GetPaymentMethodInfoByID(Int32 Id)
+	Static Public Boolean DeleteMethod(Int32 Id)
+	Static Public DataTable GetAllMethods()
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public Boolean Exist(Int32 Id)
+
+
+Props & Fileds of the clsPaymentMethods class:
+	Public  Int32 get_PaymentMethodID
+	Private  Void set_PaymentMethodID
+	Public  String get_PaymentMethod
+	Public  Void set_PaymentMethod
+	Public  enPaymentMethodsFailCause get_Cause
+	Private  Void set_Cause
+	Private  enMode Mode
+
+*******************************************************
+                                  clsPayments                    
+
+
+
+Constructors of the clsPayments class:
+	Public  clsPayments()
+	Private  clsPayments(Int32 PaymentID, enMethod PaymentMethod, Double PayedAmmount, Nullable`1 PaymentDate, Int32 AccountantID, Int32 AccountID, enPaymentStatus PaymentStatus)
+
+
+Methods of the clsPayments class:
+	Static Public clsPayments GetPaymentInfoByID(Int32 PaymentID)
+	Static Public DataTable GetAll()
+	Static Public Boolean Exist(Int32 PaymentID)
+	Private Boolean _CheckIfDataISCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Private Boolean _TransferMoney()
+	Public Boolean Save()
+
+
+Props & Fileds of the clsPayments class:
+	Public  Int32 get_PaymentID
+	Protected  Void set_PaymentID
+	Public  Double get_PayedAmmount
+	Public  Void set_PayedAmmount
+	Public  Nullable`1 get_PaymentDate
+	Private  Void set_PaymentDate
+	Public  Int32 get_AccountantID
+	Public  Void set_AccountantID
+	Public  Int32 get_AccountID
+	Public  Void set_AccountID
+	Public  enPaymentFailCause get_Cause
+	Private  Void set_Cause
+	Private  Boolean _IsCancceledOrPayed
+	Public  enPaymentStatus status
+	Public  enMethod PaymentMethod
+	Private  enMode _Mode
+
+*******************************************************
+                                  clsPerson                    
+
+
+
+Constructors of the clsPerson class:
+	Public  clsPerson()
+	Protected  clsPerson(Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, Int32 CountryID)
+
+
+Methods of the clsPerson class:
+	Static Public clsPerson FindByID(Int32 PersonID)
+	Static Public DataTable GetAll(enShowing showing)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean SavePerson()
+	Static Public Boolean Exist(Int32 personID)
+
+
+Props & Fileds of the clsPerson class:
+	Public  Int32 get_PersonID
+	Protected  Void set_PersonID
+	Public  String get_FirstName
+	Public  Void set_FirstName
+	Public  String get_LastName
+	Public  Void set_LastName
+	Public  String get_Phone
+	Public  Void set_Phone
+	Public  DateTime get_DateofBirth
+	Public  Void set_DateofBirth
+	Public  Char get_Gender
+	Public  Void set_Gender
+	Public  Int32 get_CountryID
+	Public  Void set_CountryID
+	Public  enPersonsFailCauses get_Cause
+	Protected  Void set_Cause
+	Public  clsBankAccount Account
+	Public  enShowing Showing
+	Protected  enMode Mode
+
+*******************************************************
+                                  clsPharmacists                    
+
+
+
+Constructors of the clsPharmacists class:
+	Public  clsPharmacists():Base()
+	Private  clsPharmacists(Int32 PharmacistID, Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)	 :clsEmployees(Int32 EmployeeID, Double Salery, Byte WorkingDays, Int32 DepartmentID, Int32 PersonID, String FirstName, String LastName, String Phone, DateTime DateofBirth, Char Gender, clsBankAccount account, enState EmployeeState, DateTime EmploymentDate, Nullable`1 DueDate, Int32 CountryID)
+
+
+Methods of the clsPharmacists class:
+	Static Public clsPharmacists FindByID(Int32 PharmacistID)
+	Private Boolean _AddNew(Int32 PersonID)
+	Private Boolean _Update()
+	Public Boolean SavePharmacist(Int32 PersonID)
+	Static Public Boolean Exist(Int32 PharmacistID)
+	Static Public DataTable GetAll(enShowing showing)
+
+
+Props & Fileds of the clsPharmacists class:
+	Public  Int32 get_PharmacistID
+	Private  Void set_PharmacistID
+	Public  enState EmployeeState
+	Public  clsBankAccount Account
+	Public  enShowing Showing
+	Protected  enMode Mode
+
+*******************************************************
+                                  clsSpecilization                    
+
+
+
+Constructors of the clsSpecilization class:
+	Public  clsSpecilization()
+	Private  clsSpecilization(Int32 SpecilizationID, String SpecilizationName)
+
+
+Methods of the clsSpecilization class:
+	Static Public clsSpecilization FindSpecilizationByID(Int32 SpecilizationID)
+	Static Public clsSpecilization FindSpecilizationByName(String SpecName)
+	Static Public Boolean DeleteSpecilization(Int32 specilizationID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewSpec()
+	Public Boolean Save()
+	Private Boolean _UpdateSpec()
+	Static Public DataTable GetAllSpecilizations()
+	Static Public Boolean Exist(Int32 SpecilizationID)
+
+
+Props & Fileds of the clsSpecilization class:
+	Public  Int32 get_SpecilizationID
+	Private  Void set_SpecilizationID
+	Public  String get_SpecilizationName
+	Public  Void set_SpecilizationName
+	Public  enSpecFailCause get_Cause
+	Private  Void set_Cause
+	Private  enMode Mode
+
+*******************************************************
+                                  DocumentationNavigator                    
+
+
+
+Constructors of the DocumentationNavigator class:
+
+
+Methods of the DocumentationNavigator class:
+	Static Private String GetParameterList(ParameterInfo[] parameters)
+	Static Private String IdentifyModifier(MethodInfo Method)
+	Static Private String IdentifyModifier(FieldInfo Field)
+	Static Private String IdentifyModifier(ConstructorInfo Constructor)
+	Static Private String GetConstructors(Type ClassType)
+	Static Private String GetMethods(Type ClassType)
+	Static Private String GetProps(Type ClassType)
+	Static Private String GetFields(Type ClassType)
+	Static Private String DoccumentClass(Type Class)
+	Static Private IEnumerable`1 _GetAllProjectClasses()
+	Static Private Void _UploadDocomentationDataToFile(String Data, String filename)
+	Static Public Void DoccumentProject()
+
+
+Props & Fileds of the DocumentationNavigator class:
+	Static Private  String _FilePath
+
+*******************************************************
+                                  DocumentationAttribute                    
+
+
+
+Constructors of the DocumentationAttribute class:
+	Public  DocumentationAttribute():Base()
+
+
+Methods of the DocumentationAttribute class:
+
+
+Props & Fileds of the DocumentationAttribute class:
+
+*******************************************************
+                                  clsSystem                    
+
+
+
+Constructors of the clsSystem class:
+	Private  clsSystem(enLanguage language, enThemes themes)
+
+
+Methods of the clsSystem class:
+	Public Boolean UpdateSystem(enLanguage language, enThemes themes)
+	Static Public clsSystem GetSystemInfo()
+
+
+Props & Fileds of the clsSystem class:
+	Private  Int32 ID
+	Public  enLanguage Language
+	Public  enThemes themes
+
+*******************************************************
+                                  clsDiagnosis                    
+
+
+
+Constructors of the clsDiagnosis class:
+	Public  clsDiagnosis():Base()
+	Private  clsDiagnosis(Int32 DiagnosisID, Int32 DoctorID, Int32 MedicalRecordID, Int32 SpecilizationID, Int32 ServiceID, DateTime Date, DateTime ServiceStartTime, Nullable`1 ServiceEndTime, Int32 PatientID, Int32 PaymentID, enState State)	 :clsServices(Int32 ServiceID, DateTime Date, DateTime ServiceStartTime, Nullable`1 ServiceEndTime, Int32 PatientID, Int32 PaymentID, Int32 ServiceTypeID, enState State)
+
+
+Methods of the clsDiagnosis class:
+	Static Public clsDiagnosis GetDiagnosisInfoByID(Int32 DiagnosisID)
+	Static Public Boolean Exist(Int32 DiagnosisID)
+	Private Boolean _CheckIfDataISCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean SaveDiagnnosis()
+	Static Public Int32 GetDiagnosisIDbyMedicalRecordID(Int32 MedRecID)
+	Static Public DataTable GetAll(Int32 ID, enShowing Showing)
+
+
+Props & Fileds of the clsDiagnosis class:
+	Public  Int32 get_DiagnosisID
+	Protected  Void set_DiagnosisID
+	Public  Int32 get_DoctorID
+	Public  Void set_DoctorID
+	Public  clsMedicalRecords get_MedicalRecord
+	Public  Void set_MedicalRecord
+	Public  Int32 get_SpecilizationID
+	Public  Void set_SpecilizationID
+	Private  Int32 _DoctorID
+	Private  Int32 _specilizationID
+	Protected  Int32 _PatientID
+	Public  enState State
+	Protected  Boolean _CancceldOrFinished
+	Protected  enMode _Mode
+
+*******************************************************
+                                  clsOperations                    
+
+
+
+Constructors of the clsOperations class:
+	Public  clsOperations():Base()
+	Private  clsOperations(Int32 OperationID, Int32 MedicalRecordID, Int32 SpecilizationID, Int32 OperationRoomID, enOperationResult result, Int32 ServiceID, DateTime Date, DateTime ServiceStartTime, Nullable`1 ServiceEndTime, Int32 PatientID, Int32 PaymentID, enState State)	 :clsServices(Int32 ServiceID, DateTime Date, DateTime ServiceStartTime, Nullable`1 ServiceEndTime, Int32 PatientID, Int32 PaymentID, Int32 ServiceTypeID, enState State)
+
+
+Methods of the clsOperations class:
+	Static Public clsOperations GetOperationInfoByID(Int32 OperationID)
+	Private Boolean _checkIfStaffMemberDontHaveOverLabTime()
+	Private Boolean _CheckIfDataISCorrect()
+	Static Public DataTable GetAll(Int32 ID, enShowing showing)
+	Static Public Boolean Exist(Int32 OperationID)
+	Private Void _RollBackFromFailedOperationAdd(clsOperationRoomReservation roomReservation)
+	Private Void _RollBackFromFailedRoomReservationAddition()
+	Private Boolean _AddNew()
+	Private Boolean _ReturnOperationResultAndState()
+	Private Boolean _Update()
+	Public Boolean SaveOperation()
+
+
+Props & Fileds of the clsOperations class:
+	Public  Int32 get_OperationID
+	Protected  Void set_OperationID
+	Public  Int32 get_MedicalRecordID
+	Public  Void set_MedicalRecordID
+	Public  Int32 get_SpecilizationID
+	Public  Void set_SpecilizationID
+	Public  Int32 get_OperationRoomID
+	Public  Void set_OperationRoomID
+	Private  Int32 _MedicalRecordID
+	Private  Int32 _specilizationID
+	Private  Int32 _OperationRoomID
+	Public  enOperationResult Result
+	Protected  Int32 _PatientID
+	Public  enState State
+	Protected  Boolean _CancceldOrFinished
+	Protected  enMode _Mode
+
+*******************************************************
+                                  clsPharmacyRecord                    
+
+
+
+Constructors of the clsPharmacyRecord class:
+	Public  clsPharmacyRecord()
+	Protected  clsPharmacyRecord(Int32 RecordID, Nullable`1 Date, Int32 PatientID, Int32 PaymentID, Int32 PharmacistID, Int32 PrescriptionID, clsBasket Basket)
+
+
+Methods of the clsPharmacyRecord class:
+	Static Public clsPharmacyRecord GetPharmecyRecordInfoByID(Int32 RecordID)
+	Static Public DataTable GetAll()
+	Static Private DataTable GetAllRecsForPatient(Int32 PatientID)
+	Static Public Boolean Exist(Int32 PharmacistID)
+	Private Boolean _CheckIfDataISCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _checkIFAllMedicineInPrescriptionIsDisspensed(Int32 PrescID)
+	Private Boolean _Update()
+	Public Boolean Save()
+
+
+Props & Fileds of the clsPharmacyRecord class:
+	Public  Int32 get_RecordID
+	Private  Void set_RecordID
+	Public  Int32 get_PatientID
+	Private  Void set_PatientID
+	Public  Int32 get_PharmacistID
+	Public  Void set_PharmacistID
+	Public  Int32 get_PrescriptionID
+	Public  Void set_PrescriptionID
+	Public  Nullable`1 get_Date
+	Private  Void set_Date
+	Public  Int32 get_PaymentID
+	Private  Void set_PaymentID
+	Public  enPrescriptionState get_prescriptionState
+	Private  Void set_prescriptionState
+	Public  enPharmecyRecFailCause get_Cause
+	Protected  Void set_Cause
+	Protected  Int32 _PharmacistID
+	Public  clsBasket Basket
+	Private  Int32 _PrescriptionID
+	Protected  Boolean _CancceldOrFinished
+	Protected  enMode _Mode
+
+*******************************************************
+                                  clsServices                    
+
+
+
+Constructors of the clsServices class:
+	Public  clsServices()
+	Protected  clsServices(Int32 ServiceID, DateTime Date, DateTime ServiceStartTime, Nullable`1 ServiceEndTime, Int32 PatientID, Int32 PaymentID, Int32 ServiceTypeID, enState State)
+
+
+Methods of the clsServices class:
+	Static Public clsServices GetServiceInfoByID(Int32 ServiceID)
+	Static Public DataTable GetAll(Int32 ID, enShowing Showing)
+	Static Private DataTable GetAllServicesForPatient(Int32 PatientID)
+	Static Public Boolean Exist(Int32 ServiceID)
+	Private Boolean _CheckIfDataISCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _UploadUpdated()
+	Private Boolean _Update()
+	Private Boolean SaveServices()
+
+
+Props & Fileds of the clsServices class:
+	Public  Int32 get_ServiceID
+	Protected  Void set_ServiceID
+	Public  DateTime get_ServiceStartDateTime
+	Public  Void set_ServiceStartDateTime
+	Public  Nullable`1 get_ServiceEndTime
+	Protected  Void set_ServiceEndTime
+	Public  Int32 get_PatientID
+	Public  Void set_PatientID
+	Public  Int32 get_PaymentID
+	Protected  Void set_PaymentID
+	Public  Int32 get_ServiceTypeID
+	Protected  Void set_ServiceTypeID
+	Public  enServicesFailCause get_Cause
+	Protected  Void set_Cause
+	Protected  Int32 _PatientID
+	Private  Int32 _ServiceTypeID
+	Public  enState State
+	Protected  Boolean _CancceldOrFinished
+	Protected  enMode _Mode
+
+*******************************************************
+                                  clsBasket                    
+
+
+
+Constructors of the clsBasket class:
+	Public  clsBasket()
+	Private  clsBasket(Int32 BasketID, Int16 NumOfItems, Double TotalPrice)
+
+
+Methods of the clsBasket class:
+	Static Public clsBasket FindBasketByID(Int32 BasketID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewBasket()
+	Public Boolean Save()
+	Private Boolean _UpdateBasket()
+	Static Public Boolean Exist(Int32 BasketID)
+	Public Boolean AddItemToBasket(Int32 PrescripedMedID)
+	Public Boolean RemoveItemFromBasketItem(Int32 ItemID)
+
+
+Props & Fileds of the clsBasket class:
+	Public  Int32 get_BasketID
+	Private  Void set_BasketID
+	Public  Int16 get_NumOfItems
+	Private  Void set_NumOfItems
+	Public  Double get_TotalPrice
+	Private  Void set_TotalPrice
+	Private  Int32 PrescriptionID
+	Private  enMode Mode
+
+*******************************************************
+                                  clsItems                    
+
+
+
+Constructors of the clsItems class:
+	Public  clsItems()
+	Private  clsItems(Int32 ItemID, Int32 PrescripedMedID, Int32 BasketID, Double Price)
+
+
+Methods of the clsItems class:
+	Static Public clsItems FindItemByID(Int32 ItemID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewItem()
+	Public Boolean Save()
+	Private Boolean _UpdateItem()
+	Static Public Boolean Exist(Int32 ItemID)
+	Static Public DataTable GetItemsForBasket(Int32 BasketID)
+	Static Public Boolean DeleteItem(Int32 ItemID)
+	Static Public Boolean DeleteItemByPrescripedMedID(Int32 PrescripedMedID)
+
+
+Props & Fileds of the clsItems class:
+	Public  Int32 get_ItemID
+	Private  Void set_ItemID
+	Public  Int32 get_PrescripedMedID
+	Public  Void set_PrescripedMedID
+	Public  Double get_Price
+	Private  Void set_Price
+	Public  Int32 get_BasketID
+	Public  Void set_BasketID
+	Private  Int32 _PrescripedMedID
+	Private  Int32 _BasketID
+	Private  enMode Mode
+
+*******************************************************
+                                  clsMedications                    
+
+
+
+Constructors of the clsMedications class:
+	Public  clsMedications()
+	Private  clsMedications(Int32 MedicationID, Int32 CatorgyID, Double Price, String Notes, String MedicationName, Int32 Quantity)
+
+
+Methods of the clsMedications class:
+	Static Public clsMedications FindMedicationByID(Int32 MedicationID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewMedication()
+	Public Boolean Save()
+	Private Boolean UpdateMedication()
+	Static Public DataTable GetAllMedication(enShowing showing)
+	Static Public Boolean Exist(Int32 MedIcationID)
+
+
+Props & Fileds of the clsMedications class:
+	Public  Int32 get_MedicationID
+	Private  Void set_MedicationID
+	Public  String get_MedicationName
+	Public  Void set_MedicationName
+	Public  String get_Notes
+	Public  Void set_Notes
+	Public  Int32 get_Quantity
+	Public  Void set_Quantity
+	Public  Double get_Price
+	Public  Void set_Price
+	Public  Int32 get_CatorgyID
+	Public  Void set_CatorgyID
+	Public  enMedicationsFailCause get_FailCause
+	Private  Void set_FailCause
+	Private  Int32 _CatorgyID
+	Private  enMode Mode
+
+*******************************************************
+                                  clsPrescripedMed                    
+
+
+
+Constructors of the clsPrescripedMed class:
+	Public  clsPrescripedMed()
+	Private  clsPrescripedMed(Int32 PrescripedMedID, Double Dosage, DateTime StartDate, DateTime EndDate, Int32 PrescriptionID, String Instructions, Int32 MedicationID, enState State)
+
+
+Methods of the clsPrescripedMed class:
+	Static Public clsPrescripedMed FindPrescripedMedicationByID(Int32 PrescripedMedID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewPrescripedMed()
+	Public Boolean Save()
+	Private Boolean _UpdatePrescripedMed()
+	Static Public DataTable GetAllPrescripedMed()
+	Static Public Boolean Exist(Int32 PrescripedMedID)
+	Static Public DataTable GetAllPrescripedMedForPrescription(Int32 PrescriptionID)
+
+
+Props & Fileds of the clsPrescripedMed class:
+	Public  Int32 get_PrescripedMedID
+	Private  Void set_PrescripedMedID
+	Public  Double get_Dosage
+	Public  Void set_Dosage
+	Public  DateTime get_StartDate
+	Public  Void set_StartDate
+	Public  DateTime get_EndDate
+	Public  Void set_EndDate
+	Public  Int32 get_PrescriptionID
+	Public  Void set_PrescriptionID
+	Public  String get_Instructions
+	Public  Void set_Instructions
+	Public  Int32 get_MedicationID
+	Public  Void set_MedicationID
+	Public  enPrescripedMedFailCause get_FailCause
+	Private  Void set_FailCause
+	Private  Int32 _PrescriptionID
+	Private  Int32 _MedicationID
+	Private  enMode Mode
+	Public  enState State
+	Private  Boolean _CancelledOrDispensed
+
+*******************************************************
+                                  clsPrescription                    
+
+
+
+Constructors of the clsPrescription class:
+	Public  clsPrescription()
+	Private  clsPrescription(Int32 PrescriptionID, Int32 MedicalRecordID, enPrescriptionState State)
+
+
+Methods of the clsPrescription class:
+	Static Public clsPrescription FindPrescriptionByID(Int32 PrescriptionID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewPrescription()
+	Public Boolean Save()
+	Private Boolean _UpdatePrescription()
+	Static Public DataTable GetAllPrescriptions(enShowing Showing, Int32 ID)
+	Static Public DataTable GetAllPrescriptionsForPatient(Int32 PatientID)
+	Static Public Boolean Exist(Int32 PrescriptionID)
+
+
+Props & Fileds of the clsPrescription class:
+	Public  Int32 get_PrescriptionID
+	Private  Void set_PrescriptionID
+	Public  Int32 get_MedicalRecordID
+	Public  Void set_MedicalRecordID
+	Public  enPrescriptionFailCause get_FailCause
+	Private  Void set_FailCause
+	Private  Int32 _MedicalRecordID
+	Private  Boolean _Cancelled
+	Public  enPrescriptionState State
+	Private  enMode Mode
+
+*******************************************************
+                                  clsDoctorReservation                    
+
+
+
+Constructors of the clsDoctorReservation class:
+	Public  clsDoctorReservation()
+	Private  clsDoctorReservation(Int32 ReservationID, Int32 DoctorID, Int32 ServiceID, DateTime date, DateTime time)
+
+
+Methods of the clsDoctorReservation class:
+	Static Public clsDoctorReservation FindReservationRecordByID(Int32 ReservationID)
+	Static Public clsDoctorReservation FindReservationRecordByServiceID(Int32 ServiceID)
+	Static Public clsDoctorReservation FindReservationRecordByServiceIDandDoctorID(Int32 ServiceID, Int32 DoctorID)
+	Private Boolean _CheckData()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public DataTable GetDoctorReservations(enShowing showing, Int32 DoctorID)
+	Static Public DataTable GetServiceReservations(Int32 ServiceID)
+	Static Public Boolean Exist(Int32 ReservationID)
+	Static Public Boolean CheckDiagnosisReservationDosentOverLap(Int32 DoctorID, DateTime date, DateTime Time, Int32 ServiceID)
+	Static Public Boolean CheckOperationReservationDosentOverLap(Int32 DoctorID, DateTime date, DateTime Time, Int32 ServiceID)
+
+
+Props & Fileds of the clsDoctorReservation class:
+	Public  Int32 get_ReservationID
+	Private  Void set_ReservationID
+	Public  Int32 get_DoctorID
+	Public  Void set_DoctorID
+	Public  Int32 get_ServiceID
+	Public  Void set_ServiceID
+	Public  DateTime get_Date_Time
+	Public  Void set_Date_Time
+	Public  enLogsAndRecFailCause get_Cause
+	Private  Void set_Cause
+	Public  enState get_State
+	Private  Void set_State
+	Private  enMode _Mode
+	Private  Int32 _DoctorID
+	Private  Int32 _ServiceID
+
+*******************************************************
+                                  clsMedicalRecords                    
+
+
+
+Constructors of the clsMedicalRecords class:
+	Public  clsMedicalRecords()
+	Private  clsMedicalRecords(Int32 RecordID, Int32 PatientID, String DiagnosticNotes, enState State)
+
+
+Methods of the clsMedicalRecords class:
+	Static Public clsMedicalRecords FindMedicalRecordByID(Int32 RecordID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public DataTable GetAllRecords(enShowing Showing, Int32 ID)
+	Static Public Boolean Exist(Int32 RecordID)
+
+
+Props & Fileds of the clsMedicalRecords class:
+	Public  Int32 get_RecordID
+	Private  Void set_RecordID
+	Public  Int32 get_PatientID
+	Public  Void set_PatientID
+	Public  String get_DiagnosticNotes
+	Public  Void set_DiagnosticNotes
+	Public  enLogsAndRecFailCause get_Cause
+	Private  Void set_Cause
+	Public  enState State
+	Private  enMode _Mode
+	Private  Int32 _PatientID
+
+*******************************************************
+                                  clsNurseReservation                    
+
+
+
+Constructors of the clsNurseReservation class:
+	Public  clsNurseReservation()
+	Private  clsNurseReservation(Int32 ReservationID, Int32 NurseID, Int32 ServiceID, DateTime date, DateTime time)
+
+
+Methods of the clsNurseReservation class:
+	Static Public clsNurseReservation FindReservationRecordByID(Int32 ReservationID)
+	Static Public clsNurseReservation FindReservationRecordByServiceIDAndNurseID(Int32 ServiceID, Int32 NurseID)
+	Static Public DataTable GetServiceReservations(Int32 ServiceID)
+	Private Boolean _CheckData()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public DataTable GetAllReservations(enShowing Showing, Int32 ID)
+	Static Public Boolean Exist(Int32 ReservationID)
+	Static Public Boolean CheckOperationReservationDosentOverLap(Int32 NurseID, DateTime date, DateTime Time, Int32 ServiceID)
+
+
+Props & Fileds of the clsNurseReservation class:
+	Public  Int32 get_ReservationID
+	Private  Void set_ReservationID
+	Public  Int32 get_NurseID
+	Public  Void set_NurseID
+	Public  Int32 get_ServiceID
+	Public  Void set_ServiceID
+	Public  DateTime get_Date_Time
+	Public  Void set_Date_Time
+	Public  enLogsAndRecFailCause get_Cause
+	Private  Void set_Cause
+	Public  enState get_State
+	Private  Void set_State
+	Private  enMode _Mode
+	Private  Int32 _NurseID
+	Private  Int32 _ServiceID
+
+*******************************************************
+                                  clsOperationRoomReservation                    
+
+
+
+Constructors of the clsOperationRoomReservation class:
+	Public  clsOperationRoomReservation()
+	Private  clsOperationRoomReservation(Int32 ReservationID, Int32 RoomID, Int32 ServiceID, DateTime date, DateTime time)
+
+
+Methods of the clsOperationRoomReservation class:
+	Static Public clsOperationRoomReservation FindReservationRecordByID(Int32 ReservationID)
+	Static Public clsOperationRoomReservation FindReservationRecordByServiceID(Int32 ServiceID)
+	Private Boolean _CheckData()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public DataTable GetAllReservations()
+	Static Public Boolean Exist(Int32 ReservationID)
+	Static Public Boolean CheckRoomsReservationDosentOverLap(Int32 RoomID, DateTime date, DateTime Time, Int32 ServiceID)
+	Static Public DataTable GetAllRoomReservationRecordsByID(Int32 RoomID)
+
+
+Props & Fileds of the clsOperationRoomReservation class:
+	Public  Int32 get_ReservationID
+	Private  Void set_ReservationID
+	Public  Int32 get_RoomID
+	Public  Void set_RoomID
+	Public  Int32 get_ServiceID
+	Public  Void set_ServiceID
+	Public  DateTime get_Date_Time
+	Public  Void set_Date_Time
+	Public  enLogsAndRecFailCause get_Cause
+	Private  Void set_Cause
+	Public  enState get_State
+	Private  Void set_State
+	Private  Int32 _RoomID
+	Private  Int32 _ServiceID
+	Private  enMode _Mode
+
+*******************************************************
+                                  clsOperationStaff                    
+
+
+
+Constructors of the clsOperationStaff class:
+	Public  clsOperationStaff()
+	Private  clsOperationStaff(Int32 StaffID, Int32 EmployeeID, Int32 OperationID, enState State)
+
+
+Methods of the clsOperationStaff class:
+	Static Public clsOperationStaff FindStaffRecordByID(Int32 StaffID)
+	Private Boolean _CheckData()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public DataTable GetAllOperationsStaff(Int32 OperationID)
+	Static Public Boolean Exist(Int32 StaffID)
+	Static Public Boolean Exist(Int32 EmployeeID, Int32 OperationID)
+	Static Public Boolean DeleteStaff(Int32 StaffID)
+	Public Boolean CheckStaffReservationDosentOverLap(Int32 EmployeeID, Int32 OperationID)
+	Static Public DataTable GetAllStaffForOperation(Int32 OperationID)
+
+
+Props & Fileds of the clsOperationStaff class:
+	Public  Int32 get_ID
+	Private  Void set_ID
+	Public  Int32 get_EmployeeID
+	Public  Void set_EmployeeID
+	Public  Int32 get_OperationID
+	Public  Void set_OperationID
+	Public  enLogsAndRecFailCause get_Cause
+	Private  Void set_Cause
+	Private  Int32 _EmployeeID
+	Private  Int32 _OperationID
+	Private  Int32 _DepartmentID
+	Private  DateTime StartDateTime
+	Private  enMode _Mode
+	Private  enState State
+
+*******************************************************
+                                  clsLogins                    
+
+
+
+Constructors of the clsLogins class:
+	Public  clsLogins()
+	Private  clsLogins(Int32 ID, String LoginName, String Password, Byte Permissions, Int32 EmployeeID, String PhotoPath, enLoginStatus status)
+
+
+Methods of the clsLogins class:
+	Static Public clsLogins FindLoginInfoByID(Int32 LoginID)
+	Static Public clsLogins FindLoginInfoByEmployeeID(Int32 EmployeeID)
+	Static Public clsLogins FindLoginInfoByLohinName(String LoginName)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNew()
+	Private Boolean _Update()
+	Public Boolean Save()
+	Static Public DataTable GetAllLogins()
+	Static Public Boolean Exist(Int32 LoginID)
+	Static Private Boolean _CheckifUserHaveAccess(clsLogins Login)
+	Static Private Boolean _CheckIfLoginNameAndPasswordIsCorrect(clsLogins Login, String Password)
+	Static Public Boolean CheckLogedUserInfo(String LoginName, String Password)
+
+
+Props & Fileds of the clsLogins class:
+	Public  Int32 get_ID
+	Private  Void set_ID
+	Public  String get_LoginName
+	Public  Void set_LoginName
+	Public  String get_Password
+	Public  Void set_Password
+	Public  Byte get_Permissions
+	Private  Void set_Permissions
+	Public  Int32 get_EmployeeID
+	Public  Void set_EmployeeID
+	Public  clsEmployees get_Employee
+	Private  Void set_Employee
+	Public  String get_PhotoPath
+	Public  Void set_PhotoPath
+	Private  enLoginStatus get_Status
+	Private  Void set_Status
+	Public  Int32 _EmployeeID
+	Private  enMode _Mode
+	Public  enLoginFailCause Cause
+
+*******************************************************
+                                  clsLogs                    
+
+
+
+Constructors of the clsLogs class:
+	Public  clsLogs()
+	Private  clsLogs(Int32 LogID, Int32 LoginID, DateTime Date)
+
+
+Methods of the clsLogs class:
+	Static Public clsLogs FindLogRecInfoByID(Int32 LogID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewLog()
+	Public Boolean Save()
+	Static Public DataTable GetAllLogs()
+	Static Public DataTable GetAllEmployeeLogs(Int32 EmployeeID)
+
+
+Props & Fileds of the clsLogs class:
+	Public  Int32 get_LogID
+	Private  Void set_LogID
+	Public  Int32 get_LoginID
+	Public  Void set_LoginID
+	Public  DateTime get_Date
+	Private  Void set_Date
+
+*******************************************************
+                                  clsCountries                    
+
+
+
+Constructors of the clsCountries class:
+	Public  clsCountries()
+	Private  clsCountries(Int32 CountryID, String CountryName, String CountryCode)
+
+
+Methods of the clsCountries class:
+	Static Public clsCountries FindCountryByID(Int32 CountryID)
+	Static Public clsCountries FindCountryByName(String CountryName)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewCountry()
+	Public Boolean Save()
+	Private Boolean _UpdateCountry()
+	Static Public DataTable GetAllCountries()
+	Static Public Boolean Exist(Int32 CountryID)
+
+
+Props & Fileds of the clsCountries class:
+	Public  Int32 get_CountryID
+	Private  Void set_CountryID
+	Public  String get_CountryName
+	Public  Void set_CountryName
+	Public  String get_CountryCode
+	Public  Void set_CountryCode
+	Private  enMode Mode
+
+*******************************************************
+                                  clsMedicalCatorgies                    
+
+
+
+Constructors of the clsMedicalCatorgies class:
+	Public  clsMedicalCatorgies()
+	Private  clsMedicalCatorgies(Int32 CatorgyID, String Catorgy, Int32 NumOfMedication)
+
+
+Methods of the clsMedicalCatorgies class:
+	Static Public clsMedicalCatorgies FindCatorgyByID(Int32 CatorgyID)
+	Static Public clsMedicalCatorgies FindCatorgyByName(String CatorgyName)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewCatorgy()
+	Public Boolean Save()
+	Private Boolean UpdateCatorgey()
+	Static Public DataTable GetAllCatorgies()
+	Static Public Boolean Exist(Int32 CattorgyID)
+
+
+Props & Fileds of the clsMedicalCatorgies class:
+	Public  Int32 get_CatorgyID
+	Private  Void set_CatorgyID
+	Public  String get_Catorgy
+	Public  Void set_Catorgy
+	Public  Int32 get_NumOfMedication
+	Public  Void set_NumOfMedication
+	Public  enCatorgiesFailCause get_FailCause
+	Private  Void set_FailCause
+	Private  enMode Mode
+
+*******************************************************
+                                  clsOperationRoom                    
+
+
+
+Constructors of the clsOperationRoom class:
+	Public  clsOperationRoom()
+	Private  clsOperationRoom(Int32 RoomID, String RoomNum)
+
+
+Methods of the clsOperationRoom class:
+	Static Public clsOperationRoom FindRoomByID(Int32 RoomID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewOperationRoom()
+	Public Boolean Save()
+	Private Boolean _UpdateOperationRoom()
+	Static Public DataTable GetAllOperationRooms()
+	Static Public Boolean Exist(Int32 RoomID)
+
+
+Props & Fileds of the clsOperationRoom class:
+	Public  Int32 get_RoomID
+	Private  Void set_RoomID
+	Public  String get_RoomNum
+	Public  Void set_RoomNum
+	Public  enOperationRoomsFailCause get_FailCause
+	Private  Void set_FailCause
+	Private  enMode Mode
+
+*******************************************************
+                                  clsServiceTypes                    
+
+
+
+Constructors of the clsServiceTypes class:
+	Public  clsServiceTypes()
+	Private  clsServiceTypes(Int32 TypeID, String ServiceName, Double ServiceCost)
+
+
+Methods of the clsServiceTypes class:
+	Static Public clsServiceTypes FindServiceTypeByID(Int32 TypeID)
+	Static Public Boolean DeleteType(Int32 TypeID)
+	Private Boolean _CheckIfDataIsCorrect()
+	Private Boolean _AddNewType()
+	Public Boolean Save()
+	Private Boolean _UpdateType()
+	Static Public DataTable GetAllTypes()
+	Static Public Boolean Exist(Int32 TypeID)
+
+
+Props & Fileds of the clsServiceTypes class:
+	Public  Int32 get_TypeID
+	Private  Void set_TypeID
+	Public  String get_ServiceName
+	Public  Void set_ServiceName
+	Public  Double get_ServiceCost
+	Public  Void set_ServiceCost
+	Public  enServicesTypesFailCause get_Cause
+	Private  Void set_Cause
+	Private  enMode Mode
+
+*******************************************************
+                                  <>c                    
+
+
+
+Constructors of the <>c class:
+	Public  <>c()
+
+
+Methods of the <>c class:
+	Private String <GetParameterList>b__1_0(ParameterInfo parameter)
+	Private Boolean <GetFields>b__8_0(FieldInfo m)
+	Private Boolean <_GetAllProjectClasses>b__10_0(Type t)
+
+
+Props & Fileds of the <>c class:
+	Static Public  <>c <>9
+	Static Public  Func`2 <>9__1_0
+	Static Public  Func`2 <>9__8_0
+	Static Public  Func`2 <>9__10_0
+
+*******************************************************
+                                  <>c__DisplayClass6_0                    
+
+
+
+Constructors of the <>c__DisplayClass6_0 class:
+	Public  <>c__DisplayClass6_0()
+
+
+Methods of the <>c__DisplayClass6_0 class:
+	Private Boolean <GetMethods>b__0(MethodInfo m)
+
+
+Props & Fileds of the <>c__DisplayClass6_0 class:
+	Public  Type ClassType
+
+*******************************************************
+                                  <>c__DisplayClass7_0                    
+
+
+
+Constructors of the <>c__DisplayClass7_0 class:
+	Public  <>c__DisplayClass7_0()
+
+
+Methods of the <>c__DisplayClass7_0 class:
+	Private Boolean <GetProps>b__0(MethodInfo m)
+
+
+Props & Fileds of the <>c__DisplayClass7_0 class:
+	Public  Type ClassType

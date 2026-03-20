@@ -1,0 +1,2302 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1391F172-123D-4D9D-ACD5-B5642CFD36CB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>HMS</RootNamespace>
+    <AssemblyName>HMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ProgramFiles\Forms\Main\Accountant\Accountant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Accountant\Accountant.Designer.cs">
+      <DependentUpon>Accountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="clsMDIParent.cs" />
+    <Compile Include="CodeDocumentationNavigator.cs" />
+    <Compile Include="ProgramFiles\Forms\Main\Doctor\Doctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Doctor\Doctor.Designer.cs">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Accountant\HeadAccountant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Accountant\HeadAccountant.Designer.cs">
+      <DependentUpon>HeadAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Doctor\HeadDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Doctor\HeadDoctor.Designer.cs">
+      <DependentUpon>HeadDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Nurse\HeadNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Nurse\HeadNurse.Designer.cs">
+      <DependentUpon>HeadNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Pharmacist\HeadPharmacist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Pharmacist\HeadPharmacist.Designer.cs">
+      <DependentUpon>HeadPharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoggedEmployee.cs" />
+    <Compile Include="ProgramFiles\Forms\Main\LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Nurse\Nurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Nurse\Nurse.Designer.cs">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Pharmacist\Pharmacist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Main\Pharmacist\Pharmacist.Designer.cs">
+      <DependentUpon>Pharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlAccountantSubPanelButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlAccountantSubPanelButton.Designer.cs">
+      <DependentUpon>ctrlAccountantSubPanelButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlButtonBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlButtonBase.Designer.cs">
+      <DependentUpon>ctrlButtonBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlDoctorSubPanelButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlDoctorSubPanelButton.Designer.cs">
+      <DependentUpon>ctrlDoctorSubPanelButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlNurseSubPanelButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlNurseSubPanelButton.Designer.cs">
+      <DependentUpon>ctrlNurseSubPanelButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlPharmacistSupPanelButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlPharmacistSupPanelButton.Designer.cs">
+      <DependentUpon>ctrlPharmacistSupPanelButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlSubPanelButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\ctrlSubPanelButton.Designer.cs">
+      <DependentUpon>ctrlSubPanelButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlCatorgiesButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlCatorgiesButton.Designer.cs">
+      <DependentUpon>ctrlCatorgiesButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlCountriesButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlCountriesButton.Designer.cs">
+      <DependentUpon>ctrlCountriesButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlDepartmentsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlDepartmentsButton.Designer.cs">
+      <DependentUpon>ctrlDepartmentsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlOperationRoomsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlOperationRoomsButton.Designer.cs">
+      <DependentUpon>ctrlOperationRoomsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlServicesTypesButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlServicesTypesButton.Designer.cs">
+      <DependentUpon>ctrlServicesTypesButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlSpecilizationsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Derived\ctrlSpecilizationsButton.Designer.cs">
+      <DependentUpon>ctrlSpecilizationsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Medications\ctrlMedicationButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Medications\ctrlMedicationButton.Designer.cs">
+      <DependentUpon>ctrlMedicationButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Medications\ctrlMyPrescriptionForDocButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Medications\ctrlMyPrescriptionForDocButton.Designer.cs">
+      <DependentUpon>ctrlMyPrescriptionForDocButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlAccountantButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlAccountantButton.Designer.cs">
+      <DependentUpon>ctrlAccountantButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlDoctorButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlDoctorButton.Designer.cs">
+      <DependentUpon>ctrlDoctorButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlEmployeeButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlEmployeeButton.Designer.cs">
+      <DependentUpon>ctrlEmployeeButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlNurseButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlNurseButton.Designer.cs">
+      <DependentUpon>ctrlNurseButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlPharmacistButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Employee\ctrlPharmacistButton.Designer.cs">
+      <DependentUpon>ctrlPharmacistButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Patient\ctrlPatientButtons.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Persons\Patient\ctrlPatientButtons.Designer.cs">
+      <DependentUpon>ctrlPatientButtons.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlDiagnosisButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlDiagnosisButton.Designer.cs">
+      <DependentUpon>ctrlDiagnosisButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlMyDiagnosisDoctorButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlMyDiagnosisDoctorButton.Designer.cs">
+      <DependentUpon>ctrlMyDiagnosisDoctorButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlMyOperationMemberButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlMyOperationMemberButton.Designer.cs">
+      <DependentUpon>ctrlMyOperationMemberButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlOperaionsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlOperaionsButton.Designer.cs">
+      <DependentUpon>ctrlOperaionsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlPaymentsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlPaymentsButton.Designer.cs">
+      <DependentUpon>ctrlPaymentsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlPharmecyRecordsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Procedures\ctrlPharmecyRecordsButton.Designer.cs">
+      <DependentUpon>ctrlPharmecyRecordsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlAllDoctorReservationButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlAllDoctorReservationButton.Designer.cs">
+      <DependentUpon>ctrlAllDoctorReservationButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlAllNursesReservationsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlAllNursesReservationsButton.Designer.cs">
+      <DependentUpon>ctrlAllNursesReservationsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlDoctorReservationButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlDoctorReservationButton.Designer.cs">
+      <DependentUpon>ctrlDoctorReservationButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlNurseReservationButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlNurseReservationButton.Designer.cs">
+      <DependentUpon>ctrlNurseReservationButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\OperationLogs\ctrlOperationRoomReservationButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\OperationLogs\ctrlOperationRoomReservationButton.Designer.cs">
+      <DependentUpon>ctrlOperationRoomReservationButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\PatientLogs\ctrlMedicalRecordsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\PatientLogs\ctrlMedicalRecordsButton.Designer.cs">
+      <DependentUpon>ctrlMedicalRecordsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\PatientLogs\ctrlPatientLogsButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\PatientLogs\ctrlPatientLogsButton.Designer.cs">
+      <DependentUpon>ctrlPatientLogsButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlLoginsListButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlLoginsListButton.Designer.cs">
+      <DependentUpon>ctrlLoginsListButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlLogsListButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlLogsListButton.Designer.cs">
+      <DependentUpon>ctrlLogsListButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlMyLogsListButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlMyLogsListButton.Designer.cs">
+      <DependentUpon>ctrlMyLogsListButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\SystemButton\ctrlSystSettButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\SystemButton\ctrlSystSettButton.Designer.cs">
+      <DependentUpon>ctrlSystSettButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\User\ctrlLoginInfoButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\User\ctrlLoginInfoButton.Designer.cs">
+      <DependentUpon>ctrlLoginInfoButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\User\ctrlMyPersonalInfoButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Buttons\User\ctrlMyPersonalInfoButton.Designer.cs">
+      <DependentUpon>ctrlMyPersonalInfoButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\clsFillcmb.cs" />
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditAccountant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditAccountant.Designer.cs">
+      <DependentUpon>ctrlAddEditAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditDoctor.Designer.cs">
+      <DependentUpon>ctrlAddEditDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditEmployee.Designer.cs">
+      <DependentUpon>ctrlAddEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditNurse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditNurse.Designer.cs">
+      <DependentUpon>ctrlAddEditNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditPharmacist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditPharmacist.Designer.cs">
+      <DependentUpon>ctrlAddEditPharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditPatient\ctrlAddEditPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditPatient\ctrlAddEditPatient.Designer.cs">
+      <DependentUpon>ctrlAddEditPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\ctrlAddEditPerson.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditPerson\ctrlAddEditPerson.Designer.cs">
+      <DependentUpon>ctrlAddEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditDiagnosis.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditDiagnosis.Designer.cs">
+      <DependentUpon>ctrlAddEditDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditOperation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditOperation.Designer.cs">
+      <DependentUpon>ctrlAddEditOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditPayments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditPayments.Designer.cs">
+      <DependentUpon>ctrlAddEditPayments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditService.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditService.Designer.cs">
+      <DependentUpon>ctrlAddEditService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditBase.Designer.cs">
+      <DependentUpon>ctrlAddEditBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditCountry.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditCountry.Designer.cs">
+      <DependentUpon>ctrlAddEditCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditDepartments.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditDepartments.Designer.cs">
+      <DependentUpon>ctrlAddEditDepartments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditLogin.Designer.cs">
+      <DependentUpon>ctrlAddEditLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditRoom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditRoom.Designer.cs">
+      <DependentUpon>ctrlAddEditRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditSpecilization.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlAddEditSpecilization.Designer.cs">
+      <DependentUpon>ctrlAddEditSpecilization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlEditServicesTypes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\ctrlEditServicesTypes.Designer.cs">
+      <DependentUpon>ctrlEditServicesTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\EditSystemSettings.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\EditSystemSettings.Designer.cs">
+      <DependentUpon>EditSystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditMedCatorgy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditMedCatorgy.Designer.cs">
+      <DependentUpon>ctrlAddEditMedCatorgy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditMedication.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditMedication.Designer.cs">
+      <DependentUpon>ctrlAddEditMedication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPharmecyRecord.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPharmecyRecord.Designer.cs">
+      <DependentUpon>ctrlAddEditPharmecyRecord.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPrescripedMed.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPrescripedMed.Designer.cs">
+      <DependentUpon>ctrlAddEditPrescripedMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPrescriptions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPrescriptions.Designer.cs">
+      <DependentUpon>ctrlAddEditPrescriptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmAccountantListcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmAccountantListcs.Designer.cs">
+      <DependentUpon>frmAccountantListcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditAccountant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditAccountant.Designer.cs">
+      <DependentUpon>frmAddEditAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditCountry.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditCountry.Designer.cs">
+      <DependentUpon>frmAddEditCountry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditDepartment.Designer.cs">
+      <DependentUpon>frmAddEditDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditDiagnosis.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditDiagnosis.Designer.cs">
+      <DependentUpon>frmAddEditDiagnosis.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditDoctor.Designer.cs">
+      <DependentUpon>frmAddEditDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditEmployee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditEmployee.Designer.cs">
+      <DependentUpon>frmAddEditEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Logs\frmAddEditLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Logs\frmAddEditLogin.Designer.cs">
+      <DependentUpon>frmAddEditLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditMedicalCatorgies.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditMedicalCatorgies.Designer.cs">
+      <DependentUpon>frmAddEditMedicalCatorgies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditMedication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditMedication.Designer.cs">
+      <DependentUpon>frmAddEditMedication.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditNurse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditNurse.Designer.cs">
+      <DependentUpon>frmAddEditNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditOperation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditOperation.Designer.cs">
+      <DependentUpon>frmAddEditOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\frmAddEditPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\frmAddEditPerson.Designer.cs">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditPharmacist.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditPharmacist.Designer.cs">
+      <DependentUpon>frmAddEditPharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditPharmecyRecords.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditPharmecyRecords.Designer.cs">
+      <DependentUpon>frmAddEditPharmecyRecords.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditPrescripedMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditPrescripedMed.Designer.cs">
+      <DependentUpon>frmAddEditPrescripedMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditPrescription.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditPrescription.Designer.cs">
+      <DependentUpon>frmAddEditPrescription.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditRoom.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditRoom.Designer.cs">
+      <DependentUpon>frmAddEditRoom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditServiceTypes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditServiceTypes.Designer.cs">
+      <DependentUpon>frmAddEditServiceTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditSpecilization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditSpecilization.Designer.cs">
+      <DependentUpon>frmAddEditSpecilization.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditStaffMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditStaffMember.Designer.cs">
+      <DependentUpon>frmAddEditStaffMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Combined\frmAddItemsToBasket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Combined\frmAddItemsToBasket.Designer.cs">
+      <DependentUpon>frmAddItemsToBasket.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Combined\frmAddPrescripedMed.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\Combined\frmAddPrescripedMed.Designer.cs">
+      <DependentUpon>frmAddPrescripedMed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmAllDoctorReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmAllDoctorReservationList.Designer.cs">
+      <DependentUpon>frmAllDoctorReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmAllNurseReservationsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmAllNurseReservationsList.Designer.cs">
+      <DependentUpon>frmAllNurseReservationsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmCountriesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmCountriesList.Designer.cs">
+      <DependentUpon>frmCountriesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmDepartmentList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmDepartmentList.Designer.cs">
+      <DependentUpon>frmDepartmentList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmDiagnosisForDoctor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmDiagnosisForDoctor.Designer.cs">
+      <DependentUpon>frmDiagnosisForDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmDiagnosisList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmDiagnosisList.Designer.cs">
+      <DependentUpon>frmDiagnosisList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmDoctorList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmDoctorList.Designer.cs">
+      <DependentUpon>frmDoctorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmDoctorReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmDoctorReservationList.Designer.cs">
+      <DependentUpon>frmDoctorReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmDoctorSelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmDoctorSelectList.Designer.cs">
+      <DependentUpon>frmDoctorSelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\frmEditPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\frmEditPayment.Designer.cs">
+      <DependentUpon>frmEditPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmEmployeeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmEmployeeList.Designer.cs">
+      <DependentUpon>frmEmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmEmployeeSelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmEmployeeSelectList.Designer.cs">
+      <DependentUpon>frmEmployeeSelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmLoginsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmLoginsList.Designer.cs">
+      <DependentUpon>frmLoginsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmLogsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmLogsList.Designer.cs">
+      <DependentUpon>frmLogsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmMedicalCatorgyList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmMedicalCatorgyList.Designer.cs">
+      <DependentUpon>frmMedicalCatorgyList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmMedicalRecordListForDoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmMedicalRecordListForDoc.Designer.cs">
+      <DependentUpon>frmMedicalRecordListForDoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmMedicalRecordsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmMedicalRecordsList.Designer.cs">
+      <DependentUpon>frmMedicalRecordsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Medication\frmMedicationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Medication\frmMedicationList.Designer.cs">
+      <DependentUpon>frmMedicationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmMyLogsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmMyLogsList.Designer.cs">
+      <DependentUpon>frmMyLogsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmNurseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmNurseList.Designer.cs">
+      <DependentUpon>frmNurseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmNurseReservationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmNurseReservationList.Designer.cs">
+      <DependentUpon>frmNurseReservationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmOperationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmOperationList.Designer.cs">
+      <DependentUpon>frmOperationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmOperationListForMember.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Services\frmOperationListForMember.Designer.cs">
+      <DependentUpon>frmOperationListForMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\frmPatientAddEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\frmPatientAddEdit.Designer.cs">
+      <DependentUpon>frmPatientAddEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Patient\frmPatientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Patient\frmPatientList.Designer.cs">
+      <DependentUpon>frmPatientList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmPatientLogsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmPatientLogsList.Designer.cs">
+      <DependentUpon>frmPatientLogsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmPatientSelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmPatientSelectList.Designer.cs">
+      <DependentUpon>frmPatientSelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmPaymentLists.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmPaymentLists.Designer.cs">
+      <DependentUpon>frmPaymentLists.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmPharmacistList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmPharmacistList.Designer.cs">
+      <DependentUpon>frmPharmacistList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmPharmecyRecordList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\frmPharmecyRecordList.Designer.cs">
+      <DependentUpon>frmPharmecyRecordList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Medication\frmPrescriptionList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Medication\frmPrescriptionList.Designer.cs">
+      <DependentUpon>frmPrescriptionList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmPrescriptionSelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmPrescriptionSelectList.Designer.cs">
+      <DependentUpon>frmPrescriptionSelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmRoomReservationsList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmRoomReservationsList.Designer.cs">
+      <DependentUpon>frmRoomReservationsList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmRoomsListForAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmRoomsListForAdmin.Designer.cs">
+      <DependentUpon>frmRoomsListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmRoomsSelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\frmRoomsSelectList.Designer.cs">
+      <DependentUpon>frmRoomsSelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmServicesTypesList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmServicesTypesList.Designer.cs">
+      <DependentUpon>frmServicesTypesList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmSpecilizationList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmSpecilizationList.Designer.cs">
+      <DependentUpon>frmSpecilizationList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\frmSystemSettings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\AddEdit\frmSystemSettings.Designer.cs">
+      <DependentUpon>frmSystemSettings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\ِfrmPersonSelectList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Forms\Lists\SelectList\ِfrmPersonSelectList.Designer.cs">
+      <DependentUpon>ِfrmPersonSelectList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlDiagnosisListViewForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlDiagnosisListViewForAdmins.Designer.cs">
+      <DependentUpon>ctrlDiagnosisListViewForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlDoctorReservationsListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlDoctorReservationsListForAdmin.Designer.cs">
+      <DependentUpon>ctrlDoctorReservationsListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlLoginsListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlLoginsListForAdmin.Designer.cs">
+      <DependentUpon>ctrlLoginsListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlLogsListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlLogsListForAdmin.Designer.cs">
+      <DependentUpon>ctrlLogsListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlMedicalCatorgiesListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlMedicalCatorgiesListForAdmins.Designer.cs">
+      <DependentUpon>ctrlMedicalCatorgiesListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlNurseReservationListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlNurseReservationListForAdmins.Designer.cs">
+      <DependentUpon>ctrlNurseReservationListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlPatientLogsListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlPatientLogsListForAdmin.Designer.cs">
+      <DependentUpon>ctrlPatientLogsListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlPaymentListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlPaymentListForAdmins.Designer.cs">
+      <DependentUpon>ctrlPaymentListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlPharmaceyRecordListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlPharmaceyRecordListForAdmin.Designer.cs">
+      <DependentUpon>ctrlPharmaceyRecordListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlRoomReservationListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\ctrlRoomReservationListForAdmins.Designer.cs">
+      <DependentUpon>ctrlRoomReservationListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlBasketListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlBasketListForAdmin.Designer.cs">
+      <DependentUpon>ctrlBasketListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlCountriesListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlCountriesListForAdmins.Designer.cs">
+      <DependentUpon>ctrlCountriesListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlDepartmentListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlDepartmentListForAdmins.Designer.cs">
+      <DependentUpon>ctrlDepartmentListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlOperationRoomListAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlOperationRoomListAdmins.Designer.cs">
+      <DependentUpon>ctrlOperationRoomListAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlServicesTypesListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlServicesTypesListForAdmins.Designer.cs">
+      <DependentUpon>ctrlServicesTypesListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlSpecilizationListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Drived\ctrlSpecilizationListForAdmins.Designer.cs">
+      <DependentUpon>ctrlSpecilizationListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\ctrlMedicalCatorgyListForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\ctrlMedicalCatorgyListForAdmin.Designer.cs">
+      <DependentUpon>ctrlMedicalCatorgyListForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlAccountantListViewForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlAccountantListViewForAdmin.Designer.cs">
+      <DependentUpon>ctrlAccountantListViewForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlDoctorListViewForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlDoctorListViewForAdmin.Designer.cs">
+      <DependentUpon>ctrlDoctorListViewForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlEmployeeListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlEmployeeListForAdmins.Designer.cs">
+      <DependentUpon>ctrlEmployeeListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlNurseListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlNurseListForAdmins.Designer.cs">
+      <DependentUpon>ctrlNurseListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlPharmacistListViewForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlPharmacistListViewForAdmin.Designer.cs">
+      <DependentUpon>ctrlPharmacistListViewForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Patient\ctrlPatientListViewForAdmin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Persons\Patient\ctrlPatientListViewForAdmin.Designer.cs">
+      <DependentUpon>ctrlPatientListViewForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Procedure\ctrlOperationListViewForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Admins\Procedure\ctrlOperationListViewForAdmins.Designer.cs">
+      <DependentUpon>ctrlOperationListViewForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\ctrlBaseDGV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\ctrlBaseDGV.Designer.cs">
+      <DependentUpon>ctrlBaseDGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\ctrlPaymentsListViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\ctrlPaymentsListViewBase.Designer.cs">
+      <DependentUpon>ctrlPaymentsListViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlBasketItemsListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlBasketItemsListBase.Designer.cs">
+      <DependentUpon>ctrlBasketItemsListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlCountriesBaseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlCountriesBaseList.Designer.cs">
+      <DependentUpon>ctrlCountriesBaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlDepartmentsListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlDepartmentsListBase.Designer.cs">
+      <DependentUpon>ctrlDepartmentsListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlOperationRoomsListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlOperationRoomsListBase.Designer.cs">
+      <DependentUpon>ctrlOperationRoomsListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlServicesTypesListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlServicesTypesListBase.Designer.cs">
+      <DependentUpon>ctrlServicesTypesListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlSpecilizationsListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlSpecilizationsListBase.Designer.cs">
+      <DependentUpon>ctrlSpecilizationsListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlLoginsListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlLoginsListBase.Designer.cs">
+      <DependentUpon>ctrlLoginsListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlLogsListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlLogsListBase.Designer.cs">
+      <DependentUpon>ctrlLogsListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlReservationBaseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlReservationBaseList.Designer.cs">
+      <DependentUpon>ctrlReservationBaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\PatientLogs\ctrlMedicalRecordBaseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\PatientLogs\ctrlMedicalRecordBaseList.Designer.cs">
+      <DependentUpon>ctrlMedicalRecordBaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\PatientLogs\ctrlPatientLogBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\PatientLogs\ctrlPatientLogBase.Designer.cs">
+      <DependentUpon>ctrlPatientLogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationForRooms\ctrlRoomReservationBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationForRooms\ctrlRoomReservationBase.Designer.cs">
+      <DependentUpon>ctrlRoomReservationBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlDoctorReservationListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlDoctorReservationListBase.Designer.cs">
+      <DependentUpon>ctrlDoctorReservationListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlNurseReservationBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlNurseReservationBase.Designer.cs">
+      <DependentUpon>ctrlNurseReservationBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlStaffBaselist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlStaffBaselist.Designer.cs">
+      <DependentUpon>ctrlStaffBaselist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlMedicalCatorgiesListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlMedicalCatorgiesListBase.Designer.cs">
+      <DependentUpon>ctrlMedicalCatorgiesListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlMedicationsListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlMedicationsListBase.Designer.cs">
+      <DependentUpon>ctrlMedicationsListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlPrescribtionBaseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlPrescribtionBaseList.Designer.cs">
+      <DependentUpon>ctrlPrescribtionBaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlPrescripedMedListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Medications\ctrlPrescripedMedListBase.Designer.cs">
+      <DependentUpon>ctrlPrescripedMedListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\ctrlPersonList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\ctrlPersonList.Designer.cs">
+      <DependentUpon>ctrlPersonList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlAccountantListBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlAccountantListBase.Designer.cs">
+      <DependentUpon>ctrlAccountantListBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlDoctorListViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlDoctorListViewBase.Designer.cs">
+      <DependentUpon>ctrlDoctorListViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlEmployee.Designer.cs">
+      <DependentUpon>ctrlEmployeeList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlEmployeeList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlNurseViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlNurseViewBase.Designer.cs">
+      <DependentUpon>ctrlNurseViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlPhatmacistListViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlPhatmacistListViewBase.Designer.cs">
+      <DependentUpon>ctrlPhatmacistListViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Patient\ctrlPatientListViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\persons\Patient\ctrlPatientListViewBase.Designer.cs">
+      <DependentUpon>ctrlPatientListViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlDiagnosisListViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlDiagnosisListViewBase.Designer.cs">
+      <DependentUpon>ctrlDiagnosisListViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlOperationListViewBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlOperationListViewBase.Designer.cs">
+      <DependentUpon>ctrlOperationListViewBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlPharmecyRecordBaseList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlPharmecyRecordBaseList.Designer.cs">
+      <DependentUpon>ctrlPharmecyRecordBaseList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlServicesListView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Bases\Services\ctrlServicesListView.Designer.cs">
+      <DependentUpon>ctrlServicesListView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\ctrlMedicationListForAdmins.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\ctrlMedicationListForAdmins.Designer.cs">
+      <DependentUpon>ctrlMedicationListForAdmins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlMedicationListForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlMedicationListForOthers.Designer.cs">
+      <DependentUpon>ctrlMedicationListForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlOperationRoomForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlOperationRoomForOthers.Designer.cs">
+      <DependentUpon>ctrlOperationRoomForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlPrescripedMedForPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlPrescripedMedForPatient.Designer.cs">
+      <DependentUpon>ctrlPrescripedMedForPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlPrescriptionsListForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\ctrlPrescriptionsListForOthers.Designer.cs">
+      <DependentUpon>ctrlPrescriptionsListForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlAccountantListViewForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlAccountantListViewForOthers.Designer.cs">
+      <DependentUpon>ctrlAccountantListViewForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlDoctorListViewForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlDoctorListViewForOthers.Designer.cs">
+      <DependentUpon>ctrlDoctorListViewForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlEmployeeListViewForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlEmployeeListViewForOthers.Designer.cs">
+      <DependentUpon>ctrlEmployeeListViewForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlNurseListViewForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlNurseListViewForOthers.Designer.cs">
+      <DependentUpon>ctrlNurseListViewForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlPharmacistListViewForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Employee\ctrlPharmacistListViewForOthers.Designer.cs">
+      <DependentUpon>ctrlPharmacistListViewForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Patient\ctrlPatientListViewForOthers.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Others\Patient\ctrlPatientListViewForOthers.Designer.cs">
+      <DependentUpon>ctrlPatientListViewForOthers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrllogsListForEmployee.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrllogsListForEmployee.Designer.cs">
+      <DependentUpon>ctrllogsListForEmployee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlMedicalRecordListForDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlMedicalRecordListForDoctor.Designer.cs">
+      <DependentUpon>ctrlMedicalRecordListForDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlMedicalRecordSelectListForDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlMedicalRecordSelectListForDoctor.Designer.cs">
+      <DependentUpon>ctrlMedicalRecordSelectListForDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlPrescriptionListForDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlPrescriptionListForDoctor.Designer.cs">
+      <DependentUpon>ctrlPrescriptionListForDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlStaffForOperation.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\ctrlStaffForOperation.Designer.cs">
+      <DependentUpon>ctrlStaffForOperation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlDiagnosisListViewForDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlDiagnosisListViewForDoctor.Designer.cs">
+      <DependentUpon>ctrlDiagnosisListViewForDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlDoctorReservationForDoctorList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlDoctorReservationForDoctorList.Designer.cs">
+      <DependentUpon>ctrlDoctorReservationForDoctorList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlNurseReservationListForNurse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlNurseReservationListForNurse.Designer.cs">
+      <DependentUpon>ctrlNurseReservationListForNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlOperationListViewForStaffMember.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Employee\ctrlOperationListViewForStaffMember.Designer.cs">
+      <DependentUpon>ctrlOperationListViewForStaffMember.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Patient\ctrlDiagnosisListViewForPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Patient\ctrlDiagnosisListViewForPatient.Designer.cs">
+      <DependentUpon>ctrlDiagnosisListViewForPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Patient\ctrlOperationListViewForPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Patient\ctrlOperationListViewForPatient.Designer.cs">
+      <DependentUpon>ctrlOperationListViewForPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Patient\ctrlPrescripedMedListForPatient.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Lists\Owners\Patient\ctrlPrescripedMedListForPatient.Designer.cs">
+      <DependentUpon>ctrlPrescripedMedListForPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\ctrlAdminPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\ctrlAdminPanel.Designer.cs">
+      <DependentUpon>ctrlAdminPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\ctrlPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\ctrlPanelBase.Designer.cs">
+      <DependentUpon>ctrlPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\AccountantPanel\ctrlAccountantPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\AccountantPanel\ctrlAccountantPanel.Designer.cs">
+      <DependentUpon>ctrlAccountantPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\AccountantPanel\ctrlHeadAccountant.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\AccountantPanel\ctrlHeadAccountant.Designer.cs">
+      <DependentUpon>ctrlHeadAccountant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\DoctorPanel\ctrlDoctorPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\DoctorPanel\ctrlDoctorPanel.Designer.cs">
+      <DependentUpon>ctrlDoctorPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\DoctorPanel\ctrlHeadDoctor.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\DoctorPanel\ctrlHeadDoctor.Designer.cs">
+      <DependentUpon>ctrlHeadDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\mainPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\mainPanelBase.Designer.cs">
+      <DependentUpon>mainPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\NursePanel\ctrlHeadNurse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\NursePanel\ctrlHeadNurse.Designer.cs">
+      <DependentUpon>ctrlHeadNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\NursePanel\ctrlNursePanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\NursePanel\ctrlNursePanel.Designer.cs">
+      <DependentUpon>ctrlNursePanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\PharmacistPanel\ctrlHeadPharmacist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\PharmacistPanel\ctrlHeadPharmacist.Designer.cs">
+      <DependentUpon>ctrlHeadPharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\PharmacistPanel\ctrlPharmacistPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\MainPanel\PharmacistPanel\ctrlPharmacistPanel.Designer.cs">
+      <DependentUpon>ctrlPharmacistPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfAccountantSupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfAccountantSupPanel.Designer.cs">
+      <DependentUpon>ctrlHeadOfAccountantSupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOFDoctorsSubPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOFDoctorsSubPanel.Designer.cs">
+      <DependentUpon>ctrlHeadOFDoctorsSubPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfNurseSupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfNurseSupPanel.Designer.cs">
+      <DependentUpon>ctrlHeadOfNurseSupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfPharmacistSupPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfPharmacistSupPanel.Designer.cs">
+      <DependentUpon>ctrlHeadOfPharmacistSupPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\subPanelBase.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\Panels\SubPanels\subPanelBase.Designer.cs">
+      <DependentUpon>subPanelBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewAccountantInfo\ctrlAccountantInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewAccountantInfo\ctrlAccountantInfo.Designer.cs">
+      <DependentUpon>ctrlAccountantInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewDoctorInfo\ctrlDoctorInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewDoctorInfo\ctrlDoctorInfo.Designer.cs">
+      <DependentUpon>ctrlDoctorInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ctrlEmployeeInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ctrlEmployeeInfo.Designer.cs">
+      <DependentUpon>ctrlEmployeeInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewNurseInfo\ctrlNurse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewNurseInfo\ctrlNurse.Designer.cs">
+      <DependentUpon>ctrlNurse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewPatientInfo\ctrlPatientInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewPatientInfo\ctrlPatientInfo.Designer.cs">
+      <DependentUpon>ctrlPatientInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ctrlPersonInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ctrlPersonInfo.Designer.cs">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewPharmacistInfo\ctrlPharmacist.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewPharmacistInfo\ctrlPharmacist.Designer.cs">
+      <DependentUpon>ctrlPharmacist.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ctrlServiceInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ctrlServiceInfo.Designer.cs">
+      <DependentUpon>ctrlServiceInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewDiagnosisInfo\ctrlDiagnosisInfocs.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewDiagnosisInfo\ctrlDiagnosisInfocs.Designer.cs">
+      <DependentUpon>ctrlDiagnosisInfocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewOperationInfo\ctrlOperationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewOperationInfo\ctrlOperationInfo.Designer.cs">
+      <DependentUpon>ctrlOperationInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewPaymentsInfo\ctrlPaymentInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewPaymentsInfo\ctrlPaymentInfo.Designer.cs">
+      <DependentUpon>ctrlPaymentInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewPharmecyRecordInfo\ctrlPharmecyRecordInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewPharmecyRecordInfo\ctrlPharmecyRecordInfo.Designer.cs">
+      <DependentUpon>ctrlPharmecyRecordInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Accountant\Accountant.resx">
+      <DependentUpon>Accountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Doctor\Doctor.resx">
+      <DependentUpon>Doctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Accountant\HeadAccountant.resx">
+      <DependentUpon>HeadAccountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Doctor\HeadDoctor.resx">
+      <DependentUpon>HeadDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Nurse\HeadNurse.resx">
+      <DependentUpon>HeadNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Pharmacist\HeadPharmacist.resx">
+      <DependentUpon>HeadPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Nurse\Nurse.resx">
+      <DependentUpon>Nurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Main\Pharmacist\Pharmacist.resx">
+      <DependentUpon>Pharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditAccountant.resx">
+      <DependentUpon>ctrlAddEditAccountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditDoctor.resx">
+      <DependentUpon>ctrlAddEditDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditEmployee.resx">
+      <DependentUpon>ctrlAddEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditNurse.resx">
+      <DependentUpon>ctrlAddEditNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditEmployees\ctrlAddEditPharmacist.resx">
+      <DependentUpon>ctrlAddEditPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditPerson\AddEditPatient\ctrlAddEditPatient.resx">
+      <DependentUpon>ctrlAddEditPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditPerson\ctrlAddEditPerson.resx">
+      <DependentUpon>ctrlAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditDiagnosis.resx">
+      <DependentUpon>ctrlAddEditDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditOperation.resx">
+      <DependentUpon>ctrlAddEditOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditPayments.resx">
+      <DependentUpon>ctrlAddEditPayments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\AddEditServices\ctrlAddEditService.resx">
+      <DependentUpon>ctrlAddEditService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\ctrlAddEditBase.resx">
+      <DependentUpon>ctrlAddEditBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\ctrlAddEditCountry.resx">
+      <DependentUpon>ctrlAddEditCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\ctrlAddEditDepartments.resx">
+      <DependentUpon>ctrlAddEditDepartments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\ctrlAddEditLogin.resx">
+      <DependentUpon>ctrlAddEditLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\ctrlAddEditRoom.resx">
+      <DependentUpon>ctrlAddEditRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\ctrlAddEditSpecilization.resx">
+      <DependentUpon>ctrlAddEditSpecilization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\ctrlEditServicesTypes.resx">
+      <DependentUpon>ctrlEditServicesTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\EditSystemSettings.resx">
+      <DependentUpon>EditSystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditMedCatorgy.resx">
+      <DependentUpon>ctrlAddEditMedCatorgy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditMedication.resx">
+      <DependentUpon>ctrlAddEditMedication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPharmecyRecord.resx">
+      <DependentUpon>ctrlAddEditPharmecyRecord.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPrescripedMed.resx">
+      <DependentUpon>ctrlAddEditPrescripedMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Add_Edit\Medications\ctrlAddEditPrescriptions.resx">
+      <DependentUpon>ctrlAddEditPrescriptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\ctrlAccountantSubPanelButton.resx">
+      <DependentUpon>ctrlAccountantSubPanelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\ctrlButtonBase.resx">
+      <DependentUpon>ctrlButtonBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\ctrlDoctorSubPanelButton.resx">
+      <DependentUpon>ctrlDoctorSubPanelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\ctrlNurseSubPanelButton.resx">
+      <DependentUpon>ctrlNurseSubPanelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\ctrlPharmacistSupPanelButton.resx">
+      <DependentUpon>ctrlPharmacistSupPanelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\ctrlSubPanelButton.resx">
+      <DependentUpon>ctrlSubPanelButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Derived\ctrlCatorgiesButton.resx">
+      <DependentUpon>ctrlCatorgiesButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Derived\ctrlCountriesButton.resx">
+      <DependentUpon>ctrlCountriesButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Derived\ctrlDepartmentsButton.resx">
+      <DependentUpon>ctrlDepartmentsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Derived\ctrlOperationRoomsButton.resx">
+      <DependentUpon>ctrlOperationRoomsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Derived\ctrlServicesTypesButton.resx">
+      <DependentUpon>ctrlServicesTypesButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Derived\ctrlSpecilizationsButton.resx">
+      <DependentUpon>ctrlSpecilizationsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Medications\ctrlMedicationButton.resx">
+      <DependentUpon>ctrlMedicationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Medications\ctrlMyPrescriptionForDocButton.resx">
+      <DependentUpon>ctrlMyPrescriptionForDocButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Persons\Employee\ctrlAccountantButton.resx">
+      <DependentUpon>ctrlAccountantButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Persons\Employee\ctrlDoctorButton.resx">
+      <DependentUpon>ctrlDoctorButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Persons\Employee\ctrlEmployeeButton.resx">
+      <DependentUpon>ctrlEmployeeButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Persons\Employee\ctrlNurseButton.resx">
+      <DependentUpon>ctrlNurseButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Persons\Employee\ctrlPharmacistButton.resx">
+      <DependentUpon>ctrlPharmacistButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Persons\Patient\ctrlPatientButtons.resx">
+      <DependentUpon>ctrlPatientButtons.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Procedures\ctrlDiagnosisButton.resx">
+      <DependentUpon>ctrlDiagnosisButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Procedures\ctrlMyDiagnosisDoctorButton.resx">
+      <DependentUpon>ctrlMyDiagnosisDoctorButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Procedures\ctrlMyOperationMemberButton.resx">
+      <DependentUpon>ctrlMyOperationMemberButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Procedures\ctrlOperaionsButton.resx">
+      <DependentUpon>ctrlOperaionsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Procedures\ctrlPaymentsButton.resx">
+      <DependentUpon>ctrlPaymentsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Procedures\ctrlPharmecyRecordsButton.resx">
+      <DependentUpon>ctrlPharmecyRecordsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlAllDoctorReservationButton.resx">
+      <DependentUpon>ctrlAllDoctorReservationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlAllNursesReservationsButton.resx">
+      <DependentUpon>ctrlAllNursesReservationsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlDoctorReservationButton.resx">
+      <DependentUpon>ctrlDoctorReservationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\EmployeeRecords\ctrlNurseReservationButton.resx">
+      <DependentUpon>ctrlNurseReservationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\OperationLogs\ctrlOperationRoomReservationButton.resx">
+      <DependentUpon>ctrlOperationRoomReservationButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\PatientLogs\ctrlMedicalRecordsButton.resx">
+      <DependentUpon>ctrlMedicalRecordsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\PatientLogs\ctrlPatientLogsButton.resx">
+      <DependentUpon>ctrlPatientLogsButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlLoginsListButton.resx">
+      <DependentUpon>ctrlLoginsListButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlLogsListButton.resx">
+      <DependentUpon>ctrlLogsListButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\Records\SystemLogs\ctrlMyLogsListButton.resx">
+      <DependentUpon>ctrlMyLogsListButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\SystemButton\ctrlSystSettButton.resx">
+      <DependentUpon>ctrlSystSettButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\User\ctrlLoginInfoButton.resx">
+      <DependentUpon>ctrlLoginInfoButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Buttons\User\ctrlMyPersonalInfoButton.resx">
+      <DependentUpon>ctrlMyPersonalInfoButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmAccountantListcs.resx">
+      <DependentUpon>frmAccountantListcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditAccountant.resx">
+      <DependentUpon>frmAddEditAccountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditCountry.resx">
+      <DependentUpon>frmAddEditCountry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditDepartment.resx">
+      <DependentUpon>frmAddEditDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditDiagnosis.resx">
+      <DependentUpon>frmAddEditDiagnosis.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditDoctor.resx">
+      <DependentUpon>frmAddEditDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditEmployee.resx">
+      <DependentUpon>frmAddEditEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Logs\frmAddEditLogin.resx">
+      <DependentUpon>frmAddEditLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditMedicalCatorgies.resx">
+      <DependentUpon>frmAddEditMedicalCatorgies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditMedication.resx">
+      <DependentUpon>frmAddEditMedication.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditNurse.resx">
+      <DependentUpon>frmAddEditNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditOperation.resx">
+      <DependentUpon>frmAddEditOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditPersons\frmAddEditPerson.resx">
+      <DependentUpon>frmAddEditPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditPersons\AddEditEmployees\frmAddEditPharmacist.resx">
+      <DependentUpon>frmAddEditPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Process\frmAddEditPharmecyRecords.resx">
+      <DependentUpon>frmAddEditPharmecyRecords.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditPrescripedMed.resx">
+      <DependentUpon>frmAddEditPrescripedMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Med\frmAddEditPrescription.resx">
+      <DependentUpon>frmAddEditPrescription.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditRoom.resx">
+      <DependentUpon>frmAddEditRoom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditServiceTypes.resx">
+      <DependentUpon>frmAddEditServiceTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditSpecilization.resx">
+      <DependentUpon>frmAddEditSpecilization.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\AddEditDerived\frmAddEditStaffMember.resx">
+      <DependentUpon>frmAddEditStaffMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Combined\frmAddItemsToBasket.resx">
+      <DependentUpon>frmAddItemsToBasket.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\Combined\frmAddPrescripedMed.resx">
+      <DependentUpon>frmAddPrescripedMed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmAllDoctorReservationList.resx">
+      <DependentUpon>frmAllDoctorReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmAllNurseReservationsList.resx">
+      <DependentUpon>frmAllNurseReservationsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmCountriesList.resx">
+      <DependentUpon>frmCountriesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmDepartmentList.resx">
+      <DependentUpon>frmDepartmentList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Services\frmDiagnosisForDoctor.resx">
+      <DependentUpon>frmDiagnosisForDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Services\frmDiagnosisList.resx">
+      <DependentUpon>frmDiagnosisList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmDoctorList.resx">
+      <DependentUpon>frmDoctorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmDoctorReservationList.resx">
+      <DependentUpon>frmDoctorReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\SelectList\frmDoctorSelectList.resx">
+      <DependentUpon>frmDoctorSelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\frmEditPayment.resx">
+      <DependentUpon>frmEditPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmEmployeeList.resx">
+      <DependentUpon>frmEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\SelectList\frmEmployeeSelectList.resx">
+      <DependentUpon>frmEmployeeSelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmLoginsList.resx">
+      <DependentUpon>frmLoginsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmLogsList.resx">
+      <DependentUpon>frmLogsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\frmMedicalCatorgyList.resx">
+      <DependentUpon>frmMedicalCatorgyList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmMedicalRecordListForDoc.resx">
+      <DependentUpon>frmMedicalRecordListForDoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\frmMedicalRecordsList.resx">
+      <DependentUpon>frmMedicalRecordsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Medication\frmMedicationList.resx">
+      <DependentUpon>frmMedicationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmMyLogsList.resx">
+      <DependentUpon>frmMyLogsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmNurseList.resx">
+      <DependentUpon>frmNurseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmNurseReservationList.resx">
+      <DependentUpon>frmNurseReservationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Services\frmOperationList.resx">
+      <DependentUpon>frmOperationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Services\frmOperationListForMember.resx">
+      <DependentUpon>frmOperationListForMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\frmPatientAddEdit.resx">
+      <DependentUpon>frmPatientAddEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Persons\Patient\frmPatientList.resx">
+      <DependentUpon>frmPatientList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmPatientLogsList.resx">
+      <DependentUpon>frmPatientLogsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\SelectList\frmPatientSelectList.resx">
+      <DependentUpon>frmPatientSelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\frmPaymentLists.resx">
+      <DependentUpon>frmPaymentLists.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Persons\Employee\frmPharmacistList.resx">
+      <DependentUpon>frmPharmacistList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\frmPharmecyRecordList.resx">
+      <DependentUpon>frmPharmecyRecordList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Medication\frmPrescriptionList.resx">
+      <DependentUpon>frmPrescriptionList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\SelectList\frmPrescriptionSelectList.resx">
+      <DependentUpon>frmPrescriptionSelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Logs\frmRoomReservationsList.resx">
+      <DependentUpon>frmRoomReservationsList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmRoomsListForAdmin.resx">
+      <DependentUpon>frmRoomsListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\SelectList\frmRoomsSelectList.resx">
+      <DependentUpon>frmRoomsSelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmServicesTypesList.resx">
+      <DependentUpon>frmServicesTypesList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\ManageList\Derived\frmSpecilizationList.resx">
+      <DependentUpon>frmSpecilizationList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\AddEdit\frmSystemSettings.resx">
+      <DependentUpon>frmSystemSettings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Forms\Lists\SelectList\ِfrmPersonSelectList.resx">
+      <DependentUpon>ِfrmPersonSelectList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlDiagnosisListViewForAdmins.resx">
+      <DependentUpon>ctrlDiagnosisListViewForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlDoctorReservationsListForAdmin.resx">
+      <DependentUpon>ctrlDoctorReservationsListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlLoginsListForAdmin.resx">
+      <DependentUpon>ctrlLoginsListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlLogsListForAdmin.resx">
+      <DependentUpon>ctrlLogsListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlMedicalCatorgiesListForAdmins.resx">
+      <DependentUpon>ctrlMedicalCatorgiesListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlNurseReservationListForAdmins.resx">
+      <DependentUpon>ctrlNurseReservationListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlPatientLogsListForAdmin.resx">
+      <DependentUpon>ctrlPatientLogsListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlPaymentListForAdmins.resx">
+      <DependentUpon>ctrlPaymentListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlPharmaceyRecordListForAdmin.resx">
+      <DependentUpon>ctrlPharmaceyRecordListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\ctrlRoomReservationListForAdmins.resx">
+      <DependentUpon>ctrlRoomReservationListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Drived\ctrlBasketListForAdmin.resx">
+      <DependentUpon>ctrlBasketListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Drived\ctrlCountriesListForAdmins.resx">
+      <DependentUpon>ctrlCountriesListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Drived\ctrlDepartmentListForAdmins.resx">
+      <DependentUpon>ctrlDepartmentListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Drived\ctrlOperationRoomListAdmins.resx">
+      <DependentUpon>ctrlOperationRoomListAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Drived\ctrlServicesTypesListForAdmins.resx">
+      <DependentUpon>ctrlServicesTypesListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Drived\ctrlSpecilizationListForAdmins.resx">
+      <DependentUpon>ctrlSpecilizationListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Persons\ctrlMedicalCatorgyListForAdmin.resx">
+      <DependentUpon>ctrlMedicalCatorgyListForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlAccountantListViewForAdmin.resx">
+      <DependentUpon>ctrlAccountantListViewForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlDoctorListViewForAdmin.resx">
+      <DependentUpon>ctrlDoctorListViewForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlEmployeeListForAdmins.resx">
+      <DependentUpon>ctrlEmployeeListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlNurseListForAdmins.resx">
+      <DependentUpon>ctrlNurseListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Persons\Employee\ctrlPharmacistListViewForAdmin.resx">
+      <DependentUpon>ctrlPharmacistListViewForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Persons\Patient\ctrlPatientListViewForAdmin.resx">
+      <DependentUpon>ctrlPatientListViewForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Admins\Procedure\ctrlOperationListViewForAdmins.resx">
+      <DependentUpon>ctrlOperationListViewForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\ctrlBaseDGV.resx">
+      <DependentUpon>ctrlBaseDGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\ctrlPaymentsListViewBase.resx">
+      <DependentUpon>ctrlPaymentsListViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlBasketItemsListBase.resx">
+      <DependentUpon>ctrlBasketItemsListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlCountriesBaseList.resx">
+      <DependentUpon>ctrlCountriesBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlDepartmentsListBase.resx">
+      <DependentUpon>ctrlDepartmentsListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlOperationRoomsListBase.resx">
+      <DependentUpon>ctrlOperationRoomsListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlServicesTypesListBase.resx">
+      <DependentUpon>ctrlServicesTypesListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\DerivedTables\ctrlSpecilizationsListBase.resx">
+      <DependentUpon>ctrlSpecilizationsListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlLoginsListBase.resx">
+      <DependentUpon>ctrlLoginsListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlLogsListBase.resx">
+      <DependentUpon>ctrlLogsListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\ctrlReservationBaseList.resx">
+      <DependentUpon>ctrlReservationBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\PatientLogs\ctrlMedicalRecordBaseList.resx">
+      <DependentUpon>ctrlMedicalRecordBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\PatientLogs\ctrlPatientLogBase.resx">
+      <DependentUpon>ctrlPatientLogBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationForRooms\ctrlRoomReservationBase.resx">
+      <DependentUpon>ctrlRoomReservationBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlDoctorReservationListBase.resx">
+      <DependentUpon>ctrlDoctorReservationListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlNurseReservationBase.resx">
+      <DependentUpon>ctrlNurseReservationBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\LogsAndRec\ReservationsForEmployees\ctrlStaffBaselist.resx">
+      <DependentUpon>ctrlStaffBaselist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Medications\ctrlMedicalCatorgiesListBase.resx">
+      <DependentUpon>ctrlMedicalCatorgiesListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Medications\ctrlMedicationsListBase.resx">
+      <DependentUpon>ctrlMedicationsListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Medications\ctrlPrescribtionBaseList.resx">
+      <DependentUpon>ctrlPrescribtionBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Medications\ctrlPrescripedMedListBase.resx">
+      <DependentUpon>ctrlPrescripedMedListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\persons\ctrlPersonList.resx">
+      <DependentUpon>ctrlPersonList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlAccountantListBase.resx">
+      <DependentUpon>ctrlAccountantListBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlDoctorListViewBase.resx">
+      <DependentUpon>ctrlDoctorListViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlEmployeeList.resx">
+      <DependentUpon>ctrlEmployeeList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlNurseViewBase.resx">
+      <DependentUpon>ctrlNurseViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\persons\Employee\ctrlPhatmacistListViewBase.resx">
+      <DependentUpon>ctrlPhatmacistListViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\persons\Patient\ctrlPatientListViewBase.resx">
+      <DependentUpon>ctrlPatientListViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Services\ctrlDiagnosisListViewBase.resx">
+      <DependentUpon>ctrlDiagnosisListViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Services\ctrlOperationListViewBase.resx">
+      <DependentUpon>ctrlOperationListViewBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Services\ctrlPharmecyRecordBaseList.resx">
+      <DependentUpon>ctrlPharmecyRecordBaseList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Bases\Services\ctrlServicesListView.resx">
+      <DependentUpon>ctrlServicesListView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\ctrlMedicationListForAdmins.resx">
+      <DependentUpon>ctrlMedicationListForAdmins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\ctrlMedicationListForOthers.resx">
+      <DependentUpon>ctrlMedicationListForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\ctrlOperationRoomForOthers.resx">
+      <DependentUpon>ctrlOperationRoomForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\ctrlPrescripedMedForPatient.resx">
+      <DependentUpon>ctrlPrescripedMedForPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\ctrlPrescriptionsListForOthers.resx">
+      <DependentUpon>ctrlPrescriptionsListForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\Employee\ctrlAccountantListViewForOthers.resx">
+      <DependentUpon>ctrlAccountantListViewForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\Employee\ctrlDoctorListViewForOthers.resx">
+      <DependentUpon>ctrlDoctorListViewForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\Employee\ctrlEmployeeListViewForOthers.resx">
+      <DependentUpon>ctrlEmployeeListViewForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\Employee\ctrlNurseListViewForOthers.resx">
+      <DependentUpon>ctrlNurseListViewForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\Employee\ctrlPharmacistListViewForOthers.resx">
+      <DependentUpon>ctrlPharmacistListViewForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Others\Patient\ctrlPatientListViewForOthers.resx">
+      <DependentUpon>ctrlPatientListViewForOthers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\ctrllogsListForEmployee.resx">
+      <DependentUpon>ctrllogsListForEmployee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\ctrlMedicalRecordListForDoctor.resx">
+      <DependentUpon>ctrlMedicalRecordListForDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\ctrlMedicalRecordSelectListForDoctor.resx">
+      <DependentUpon>ctrlMedicalRecordSelectListForDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\ctrlPrescriptionListForDoctor.resx">
+      <DependentUpon>ctrlPrescriptionListForDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\ctrlStaffForOperation.resx">
+      <DependentUpon>ctrlStaffForOperation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\Employee\ctrlDiagnosisListViewForDoctor.resx">
+      <DependentUpon>ctrlDiagnosisListViewForDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\Employee\ctrlDoctorReservationForDoctorList.resx">
+      <DependentUpon>ctrlDoctorReservationForDoctorList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\Employee\ctrlNurseReservationListForNurse.resx">
+      <DependentUpon>ctrlNurseReservationListForNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\Employee\ctrlOperationListViewForStaffMember.resx">
+      <DependentUpon>ctrlOperationListViewForStaffMember.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\Patient\ctrlDiagnosisListViewForPatient.resx">
+      <DependentUpon>ctrlDiagnosisListViewForPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\Patient\ctrlOperationListViewForPatient.resx">
+      <DependentUpon>ctrlOperationListViewForPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Lists\Owners\Patient\ctrlPrescripedMedListForPatient.resx">
+      <DependentUpon>ctrlPrescripedMedListForPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\ctrlAdminPanel.resx">
+      <DependentUpon>ctrlAdminPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\ctrlPanelBase.resx">
+      <DependentUpon>ctrlPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\AccountantPanel\ctrlAccountantPanel.resx">
+      <DependentUpon>ctrlAccountantPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\AccountantPanel\ctrlHeadAccountant.resx">
+      <DependentUpon>ctrlHeadAccountant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\DoctorPanel\ctrlDoctorPanel.resx">
+      <DependentUpon>ctrlDoctorPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\DoctorPanel\ctrlHeadDoctor.resx">
+      <DependentUpon>ctrlHeadDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\mainPanelBase.resx">
+      <DependentUpon>mainPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\NursePanel\ctrlHeadNurse.resx">
+      <DependentUpon>ctrlHeadNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\NursePanel\ctrlNursePanel.resx">
+      <DependentUpon>ctrlNursePanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\PharmacistPanel\ctrlHeadPharmacist.resx">
+      <DependentUpon>ctrlHeadPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\MainPanel\PharmacistPanel\ctrlPharmacistPanel.resx">
+      <DependentUpon>ctrlPharmacistPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfAccountantSupPanel.resx">
+      <DependentUpon>ctrlHeadOfAccountantSupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\SubPanels\ctrlHeadOFDoctorsSubPanel.resx">
+      <DependentUpon>ctrlHeadOFDoctorsSubPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfNurseSupPanel.resx">
+      <DependentUpon>ctrlHeadOfNurseSupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\SubPanels\ctrlHeadOfPharmacistSupPanel.resx">
+      <DependentUpon>ctrlHeadOfPharmacistSupPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\Panels\SubPanels\subPanelBase.resx">
+      <DependentUpon>subPanelBase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewAccountantInfo\ctrlAccountantInfo.resx">
+      <DependentUpon>ctrlAccountantInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewDoctorInfo\ctrlDoctorInfo.resx">
+      <DependentUpon>ctrlDoctorInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ctrlEmployeeInfo.resx">
+      <DependentUpon>ctrlEmployeeInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewNurseInfo\ctrlNurse.resx">
+      <DependentUpon>ctrlNurse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewPatientInfo\ctrlPatientInfo.resx">
+      <DependentUpon>ctrlPatientInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewPersonInfo\ctrlPersonInfo.resx">
+      <DependentUpon>ctrlPersonInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewPersonInfo\ViewEmployeeInfo\ViewPharmacistInfo\ctrlPharmacist.resx">
+      <DependentUpon>ctrlPharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewServicesInfo\ctrlServiceInfo.resx">
+      <DependentUpon>ctrlServiceInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewDiagnosisInfo\ctrlDiagnosisInfocs.resx">
+      <DependentUpon>ctrlDiagnosisInfocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewOperationInfo\ctrlOperationInfo.resx">
+      <DependentUpon>ctrlOperationInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewPaymentsInfo\ctrlPaymentInfo.resx">
+      <DependentUpon>ctrlPaymentInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgramFiles\ViewInfo\ViewServicesInfo\ViewPharmecyRecordInfo\ctrlPharmecyRecordInfo.resx">
+      <DependentUpon>ctrlPharmecyRecordInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HosbitalBussinessLayer\HosbitalBussinessLayer.csproj">
+      <Project>{d1e4a8b4-46bf-4016-9ba6-adfaf05fc03d}</Project>
+      <Name>HosbitalBussinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-user-member-guest-icon-png-image-701751695037005zdurfaim0y.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9306428.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ProgramFiles\Add_Edit\Records\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1801041.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images %282%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WhatsApp Image 2025-10-22 at 14.06.15_8b90211f.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-user-member-guest-icon-png-image-701751695037005zdurfaim0y1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\white-user-member-guest-icon-png-image-701751695037005zdurfaim0y2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
